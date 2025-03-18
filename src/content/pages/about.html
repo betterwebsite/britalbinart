@@ -15,11 +15,38 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1160">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Art That <span style="font-style: italic;">Connects</span> Create Your Story</h1>
+            <p class="cs-text">
+                Let the walls of your home tell your story, not someone else’s.
+            </p>
+            <a href="/contact" class="cs-button-solid">Contact Me</a>
+        </div>
+    </div>
+
+    <!--SVG V Graphic-->
+    <!-- <img class="cs-graphic" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/centered-v.svg" alt="graphic" width="1920" height="163" aria-hidden="true"> -->
+
+    <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/about.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/about.jpg">
+        <img decoding="async" src="/assets/images/about.jpg" alt="garage" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
     <!-- ============================================ -->
     <!--                    LANDING                   -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
+    <!-- <section id="int-hero">
         <h1 id="home-h">About Us</h1>
         <picture>
             <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
@@ -27,7 +54,7 @@ eleventyNavigation:
             <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
 
-    </section>
+    </section> -->
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
@@ -38,35 +65,42 @@ eleventyNavigation:
             <!-- Left Image Section -->
             <div class="cs-left">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="/assets/images/stone.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/stone.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/stone.jpg" alt="cabinets" loading="lazy" width="400" height="563">
                 </picture>
                 <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="/assets/images/me.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/me.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/me.jpg" alt="house" loading="lazy" width="400" height="563">
                 </picture>
             </div>
             <!-- Right Content Section-->
             <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
+                <span class="cs-topper">About Me</span>
+                <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Art That Inspires</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    Art has the power to tell a story—one that speaks to the heart, honors faith, and connects generations. My work is deeply rooted in storytelling, creating custom pieces inspired by personal journeys and scripture. Each painting is more than art; it’s an intentional reflection of hope, meaning, and connection. Through my creative process, I help bring those stories to life in a way that feels personal and deeply significant.
                 </p>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    
                 </p>
                 <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
+                    <p class="cs-flex-p" style="font-size: 1.2rem;">
+                        I believe that the walls of a home should tell your story, not someone else’s.
                     </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
+                    <span class="cs-name">Brit Albin</span>
+                    <span class="cs-job"></span>
+                    <img 
+                    class="cs-quote-icon"
+                    loading="lazy"
+                    decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+                    alt="gavel"
+                    width="136"
+                    height="77"/>
                 </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+                <!-- <a href="/about" class="cs-button-solid">More About Us</a> -->
             </div>
         </div>
     </section>
