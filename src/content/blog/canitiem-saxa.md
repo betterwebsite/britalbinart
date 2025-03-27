@@ -1,13 +1,13 @@
 ---
-title: Canitiem Saxa
-url: canitiem-saxa
-description: Lorem markdownum trabeati dicere deus.
-author: Code Stitch
+title: Beautiful Painting of Wings
+url: chess.com
+description: $800
+author: Brit
 date: 2023-06-08T15:28:08.486Z
 tags:
-    - post
-    - featured
-image: /assets/images/blog/landing.jpg
+  - post
+  - freedom
+image: /assets/images/blog/wings.jpg
 imageAlt: Kitchen
 ---
 

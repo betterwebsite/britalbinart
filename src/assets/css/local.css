@@ -18,10 +18,13 @@
     row-gap: 2.5rem;
   }
   #sbs .cs-left {
+    display: block;
     position: relative;
+    margin: auto;
+    display: flex;
     height: 39.75em;
     /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
+    width: 33.1875em;
     /* scaling the font size with the view width */
     font-size: min(2.31vw, 0.7em);
   }

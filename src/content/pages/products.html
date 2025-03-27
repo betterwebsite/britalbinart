@@ -1,0 +1,260 @@
+---
+title: 'Products | Code Stitch Web Designs'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'products/'
+eleventyNavigation:
+    key: Products
+    order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/blog.css">
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Products</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/feet.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/feet.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/feet.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper" style="flex-direction: column;">
+        <!--Main content -->
+
+
+
+
+
+
+        <!-- ============================================ -->
+<!--                  Collection                  -->
+<!-- ============================================ -->
+
+<!--
+    To add a 4th or 5th collection or more, copy and paste the cs-button and change it's data-filter to the next number, in this case it's 4. Do the same to the cs-listing and its data-category number. And that's it!
+-->
+
+<section id="collection-1602">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Collections</h2>
+            <div class="cs-button-group">
+                <button class="cs-button" data-filter="one">
+                    New Arrival
+                </button>
+                <button class="cs-button" data-filter="two">
+                    Found
+                </button>
+                <button class="cs-button" data-filter="three">
+                    Freedom
+                </button>
+                <button class="cs-button" data-filter="four">
+                    Best Seller
+                </button>
+            </div>
+        </div>
+        <div class="cs-listing-wrapper">
+            {% if collections.post | length == 0 %}
+    <h1>No Recent Posts</h1>
+{% else %}
+    <div class="cs-listing-wrapper">
+        <div class="cs-listing" data-category="one">
+            {% for post in collections.post | reverse %}
+                {% set tags_lower = post.data.tags %}
+                {% if "new" in tags_lower %}
+                    <div class="cs-item">
+                        <a href="https://{{ post.url | replace('/products/', '') }}" target="_blank" class="cs-link">
+                            <script>console.log("{{ post.data.body }}")</script>
+                            <div class="cs-picture-group">
+                                <picture class="cs-picture">
+                                    <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                                    <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                                    <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="305" height="400">
+                                </picture>
+                            </div>
+                            <div class="cs-details">
+                                <span class="cs-category">{{ post.date | postDate }}</span>
+                                <h3 class="cs-name">{{ post.data.title }}</h3>
+                                <div class="cs-actions">
+                                    <div class="cs-flex">
+                                        <span class="cs-price">{{ post.data.description }}</span>
+                                    </div>
+                                    <button class="cs-buy">
+                                        <img class="cs-basket" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg" alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="cs-listing cs-hidden" data-category="two">
+            {% for post in collections.post | reverse %}
+                {% set tags_lower = post.data.tags %}
+                {% if "found" in tags_lower %}
+                    <div class="cs-item">
+                        <a href="https://{{ post.url | replace('/products/', '') }}" target="_blank" class="cs-link">
+                            <script>console.log("{{ post.data.body }}")</script>
+                            <div class="cs-picture-group">
+                                <picture class="cs-picture">
+                                    <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                                    <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                                    <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="305" height="400">
+                                </picture>
+                            </div>
+                            <div class="cs-details">
+                                <span class="cs-category">{{ post.date | postDate }}</span>
+                                <h3 class="cs-name">{{ post.data.title }}</h3>
+                                <div class="cs-actions">
+                                    <div class="cs-flex">
+                                        <span class="cs-price">{{ post.data.description }}</span>
+                                    </div>
+                                    <button class="cs-buy">
+                                        <img class="cs-basket" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg" alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="cs-listing cs-hidden" data-category="three">
+            {% for post in collections.post | reverse %}
+                {% set tags_lower = post.data.tags%}
+                {% if "freedom" in tags_lower %}
+                    <div class="cs-item">
+                        <a href="https://{{ post.url | replace('/products/', '') }}" target="_blank" class="cs-link">
+                            <script>console.log("{{ post.data.body }}")</script>
+                            <div class="cs-picture-group">
+                                <picture class="cs-picture">
+                                    <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                                    <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                                    <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="305" height="400">
+                                </picture>
+                            </div>
+                            <div class="cs-details">
+                                <span class="cs-category">{{ post.date | postDate }}</span>
+                                <h3 class="cs-name">{{ post.data.title }}</h3>
+                                <div class="cs-actions">
+                                    <div class="cs-flex">
+                                        <span class="cs-price">{{ post.data.description }}</span>
+                                    </div>
+                                    <button class="cs-buy">
+                                        <img class="cs-basket" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg" alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="cs-listing cs-hidden" data-category="four">
+            {% for post in collections.post | reverse %}
+                {% set tags_lower = post.data.tags %}
+                {% if "best seller" in tags_lower %}
+                    <div class="cs-item">
+                        <a href="https://{{ post.url | replace('/products/', '') }}" target="_blank" class="cs-link">
+                            <script>console.log("{{ post.data.body }}")</script>
+                            <div class="cs-picture-group">
+                                <picture class="cs-picture">
+                                    <source media="(max-width: 600px)" srcset="{{ post.data.image }}">
+                                    <source media="(min-width: 601px)" srcset="{{ post.data.image }}">
+                                    <img loading="lazy" decoding="async" src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="305" height="400">
+                                </picture>
+                            </div>
+                            <div class="cs-details">
+                                <span class="cs-category">{{ post.date | postDate }}</span>
+                                <h3 class="cs-name">{{ post.data.title }}</h3>
+                                <div class="cs-actions">
+                                    <div class="cs-flex">
+                                        <span class="cs-price">{{ post.data.description }}</span>
+                                    </div>
+                                    <button class="cs-buy">
+                                        <img class="cs-basket" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/ecomm-bag-icon.svg" alt="buy" height="24" width="24" loading="lazy" decoding="async">
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+        </div>
+    </div>
+</section>
+                
+<style>
+ 
+                                
+</style>
+
+<script>
+    class GalleryFilter {
+        filtersSelector = ".cs-button";
+        imagesSelector = ".cs-listing";
+        activeClass = "cs-active";
+        hiddenClass = "cs-hidden";
+
+        constructor() {
+            const $filters = document.querySelectorAll(this.filtersSelector);
+            this.$activeFilter = $filters[0];
+            this.$images = document.querySelectorAll(this.imagesSelector);
+
+            this.$activeFilter.classList.add(this.activeClass);
+
+            for (const $filter of $filters) {
+                $filter.addEventListener("click", () => this.onClick($filter));
+            }
+        }
+
+        onClick($filter) {
+            this.filter($filter.dataset.filter);
+
+            const { activeClass } = this;
+
+            this.$activeFilter.classList.remove(activeClass);
+            $filter.classList.add(activeClass);
+
+            this.$activeFilter = $filter;
+        }
+
+        filter(filter) {
+            const showAll = filter == "all";
+            const { hiddenClass } = this;
+
+            for (const $image of this.$images) {
+                const show = showAll || $image.dataset.category == filter;
+                $image.classList.toggle(hiddenClass, !show);
+            }
+        }
+    }
+
+    new GalleryFilter();
+                                
+</script>
+
+    </div>
+{% endblock %}

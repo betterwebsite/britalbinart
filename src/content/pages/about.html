@@ -23,9 +23,9 @@ eleventyNavigation:
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper"></span>
-            <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Art That <span style="font-style: italic;">Connects</span> Create Your Story</h1>
+            <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Faith You Can Frame</h1>
             <p class="cs-text">
-                Let the walls of your home tell your story, not someone else’s.
+                Weaving your story and God's word into meaningful art for your heart and home
             </p>
             <a href="/contact" class="cs-button-solid">Contact Me</a>
         </div>
@@ -56,6 +56,7 @@ eleventyNavigation:
 
     </section> -->
 
+
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
@@ -65,29 +66,29 @@ eleventyNavigation:
             <!-- Left Image Section -->
             <div class="cs-left">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/stone.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/stone.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/stone.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 500, height:500}) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}">
+                    <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="cabinets" loading="lazy" width="400" height="563">
                 </picture>
-                <picture class="cs-picture cs-picture2">
+                <!-- <picture class="cs-picture cs-picture2">
                     <source media="(max-width: 600px)" srcset="/assets/images/me.jpg">
                     <source media="(min-width: 601px)" srcset="/assets/images/me.jpg">
                     <img aria-hidden="true" decoding="async" src="/assets/images/me.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
+                </picture> -->
             </div>
             <!-- Right Content Section-->
             <div class="cs-right">
                 <span class="cs-topper">About Me</span>
-                <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Art That Inspires</h2>
+                <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Hi I'm Brit!</h2>
                 <p class="cs-text">
-                    Art has the power to tell a story—one that speaks to the heart, honors faith, and connects generations. My work is deeply rooted in storytelling, creating custom pieces inspired by personal journeys and scripture. Each painting is more than art; it’s an intentional reflection of hope, meaning, and connection. Through my creative process, I help bring those stories to life in a way that feels personal and deeply significant.
+                    I believe art has the power to tell a story—one that speaks to the heart, honors faith, and connects generations. My work is deeply rooted in storytelling, creating custom pieces inspired by personal journeys and scripture. Each painting is more than art; it’s an intentional reflection of hope, meaning, and connection. Through my creative process, I help bring those stories to life in a way that feels personal and deeply significant.
                 </p>
                 <p class="cs-text">
                     
                 </p>
                 <div class="cs-flex-group">
-                    <p class="cs-flex-p" style="font-size: 1.2rem;">
-                        I believe that the walls of a home should tell your story, not someone else’s.
+                    <p class="cs-flex-p" style="font-size: 3rem;font-family: 'Austine';font-weight: 600;">
+                        The walls of your home should tell your story, not someone else`s.
                     </p>
                     <span class="cs-name">Brit Albin</span>
                     <span class="cs-job"></span>
@@ -100,7 +101,7 @@ eleventyNavigation:
                     width="136"
                     height="77"/>
                 </div>
-                <!-- <a href="/about" class="cs-button-solid">More About Us</a> -->
+                <!-- <a href="/about" class="cs-button-solid">Learn More</a> -->
             </div>
         </div>
     </section>

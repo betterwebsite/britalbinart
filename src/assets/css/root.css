@@ -164,6 +164,15 @@
   @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Austine';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Austine.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  @font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Trirong';
     font-style: normal;
     font-weight: 300;
@@ -2048,6 +2057,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -2063,7 +2073,7 @@
     /* 20px - 40px */
     padding-bottom: clamp(1.25rem, 4.7vw, 2.5rem);
     margin: 0;
-    background: #fff;
+    background: #cccccc;
     box-shadow: -1px 21px 39px 0px rgba(0, 0, 0, 0.05);
     /* prevent padding from adding to the height and width */
     box-sizing: border-box;
@@ -2141,7 +2151,7 @@
 @media only screen and (min-width: 48rem) {
   #reviews-64 .cs-card-group {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
     /* 16px - 20px */
@@ -2304,6 +2314,969 @@
     background-attachment: fixed;
   }
   #hero-1160 .cs-background img {
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---        Collection          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #collection-1602 {
+    padding: var(--sectionPadding);
+  }
+  #collection-1602 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #collection-1602 .cs-content {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #collection-1602 .cs-title {
+    margin: 0;
+  }
+  #collection-1602 .cs-button-group {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* 16px - 32px */
+    gap: clamp(1rem, 4vw, 2rem);
+  }
+  #collection-1602 .cs-button {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    padding: 0;
+    color: var(--bodyTextColor);
+    background-color: transparent;
+    border: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+  #collection-1602 .cs-button:before {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  #collection-1602 .cs-button:hover {
+    color: var(--primary);
+    cursor: pointer;
+  }
+  #collection-1602 .cs-button:hover:before {
+    width: 100%;
+  }
+  #collection-1602 .cs-button.cs-active {
+    color: var(--primary);
+  }
+  #collection-1602 .cs-button.cs-active:before {
+    width: 100%;
+  }
+  #collection-1602 .cs-listing-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  #collection-1602 .cs-listing {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: row;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 700px;
+    transition: transform 0.7s, opacity 0.3s, visibility 0.5s, top 0.3s, left 0.3s;
+    /* makes the transform scaling origin the top left corner, dictates the direction by which the scale transforms animate towards */
+    transform-origin: left top;
+  }
+  #collection-1602 .cs-listing.cs-hidden {
+    /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
+    opacity: 0;
+    /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
+    visibility: hidden;
+    position: absolute;
+    /* this top and left value help control the animation, by setting it to position absolute and left 0, the gallery won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the top:0 value, the gallery won't go past that position when it animates */
+    top: 0;
+    left: 0;
+    /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
+    transform: scaleY(0) scaleX(0);
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+  }
+  #collection-1602 .cs-listing.cs-hidden .cs-image {
+    opacity: 0;
+    /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
+    transform: translateY(2.1875rem) rotateX(90deg);
+  }
+  #collection-1602 .cs-listing.cs-hidden .cs-item {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+  #collection-1602 .cs-item {
+    width: 100%;
+    max-width: 23.4375rem;
+    /* overwrites the default 'min-width: auto' value, keeping all grid items the same width no matter what*/
+    min-width: 0;
+    opacity: 1;
+    padding: 1rem;
+    border: 1px solid #e8e8e8;
+    transform: rotateY(0);
+    transition: transform 0.7s, opacity 0.3s;
+  }
+  #collection-1602 .cs-item:nth-of-type(1) {
+    transition-delay: 0.1s;
+  }
+  #collection-1602 .cs-item:nth-of-type(2) {
+    transition-delay: 0.2s;
+  }
+  #collection-1602 .cs-item:nth-of-type(3) {
+    transition-delay: 0.3s;
+  }
+  #collection-1602 .cs-item:nth-of-type(4) {
+    transition-delay: 0.4s;
+  }
+  #collection-1602 .cs-item:nth-of-type(5) {
+    transition-delay: 0.5s;
+  }
+  #collection-1602 .cs-item:nth-of-type(6) {
+    transition-delay: 0.6s;
+  }
+  #collection-1602 .cs-item:nth-of-type(7) {
+    transition-delay: 0.7s;
+  }
+  #collection-1602 .cs-item:nth-of-type(8) {
+    transition-delay: 0.8s;
+  }
+  #collection-1602 .cs-item:nth-of-type(9) {
+    transition-delay: 0.1s;
+  }
+  #collection-1602 .cs-item:nth-of-type(10) {
+    transition-delay: 0.1s;
+  }
+  #collection-1602 .cs-item:nth-of-type(11) {
+    transition-delay: 0.1s;
+  }
+  #collection-1602 .cs-item:nth-of-type(12) {
+    transition-delay: 0.1s;
+  }
+  #collection-1602 .cs-link {
+    text-decoration: none;
+  }
+  #collection-1602 .cs-link:hover .cs-picture img {
+    transform: scale(1.1);
+  }
+  #collection-1602 .cs-picture-group {
+    width: auto;
+    height: 18.75rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  #collection-1602 .cs-picture {
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    display: block;
+  }
+  #collection-1602 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    /* using object-fit contain to keep the entirety of the product image in the frame */
+    /* feel free to change this to 'cover', or adjust the background-color above if you have consistent backgrounds on your products */
+    object-fit: contain;
+    transition: transform 0.6s;
+  }
+  #collection-1602 .cs-offer {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    padding: 0.375rem;
+    color: #fff;
+    background: #ff4747;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  #collection-1602 .cs-category {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #767676;
+  }
+  #collection-1602 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    margin: 0;
+    color: var(--headerColor);
+    overflow: hidden;
+  }
+  #collection-1602 .cs-actions {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #collection-1602 .cs-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: var(--secondary);
+  }
+  #collection-1602 .cs-was-price {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    text-decoration: line-through;
+    color: #767676;
+  }
+  #collection-1602 .cs-stars {
+    margin-top: 0.25rem;
+    display: flex;
+  }
+  #collection-1602 .cs-star {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  #collection-1602 .cs-buy {
+    max-height: 2.5rem;
+    padding: 0.5rem;
+    background: none;
+    border: 2px solid var(--primary);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #collection-1602 .cs-basket {
+    width: 1.5rem;
+    height: auto;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #collection-1602 .cs-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #collection-1602 .cs-listing {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #collection-1602 .cs-item {
+    max-width: none;
+  }
+  #collection-1602 .cs-picture-group {
+    /* 200px - 320px */
+    height: clamp(12.5rem, 23vw, 20rem);
+  }
+}
+/*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-1076 {
+    background-color: #f1f1f4;
+    padding: var(--sectionPadding);
+  }
+  #sbsr-1076 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbsr-1076 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    /* changes to 433px at desktop */
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-1076 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-1076 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-1076 .cs-list {
+    max-width: 39.375rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    /* clips the bullets to create the half circle */
+    overflow: hidden;
+  }
+  #sbsr-1076 .cs-li {
+    list-style: none;
+    margin: 0 0 0.5rem 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #sbsr-1076 .cs-li:before {
+    /* bullet */
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.1875rem;
+    /* make it overflow the parent by half it's width to make an eclipse */
+    margin-left: -0.5rem;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: block;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #sbsr-1076 .cs-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+  }
+  #sbsr-1076 .cs-link:hover .cs-wrapper {
+    transform: scale(1.1);
+  }
+  #sbsr-1076 .cs-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    transition: transform 0.3s;
+  }
+  #sbsr-1076 .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  #sbsr-1076 .cs-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #sbsr-1076 .cs-header {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #sbsr-1076 .cs-link-content {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbsr-1076 .cs-image-group {
+    /* scales the whole group based on the view width size and stop when that vales equals .745em, resets at desktop */
+    font-size: min(1.959vw, .745em);
+    width: 46.125em;
+    height: 41.375em;
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+  }
+  #sbsr-1076 .cs-picture {
+    position: absolute;
+  }
+  #sbsr-1076 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.5em;
+  }
+  #sbsr-1076 .cs-picture1 {
+    width: 32.375em;
+    height: 46.875em;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-1076 .cs-picture2 {
+    width: 22.3125em;
+    height: 28.125em;
+    top: -3.5625em;
+    right: 0.4375em;
+    z-index: 10;
+  }
+  #sbsr-1076 .cs-picture3 {
+    width: 26.1875em;
+    height: 15em;
+    top: 28.25em;
+    left: 25em;
+    z-index: -1;
+  }
+  #sbsr-1076 .cs-stripes {
+    width: 36.125em;
+    height: auto;
+    display: none;
+    position: absolute;
+    top: 0em;
+    right: 4.5em;
+    z-index: -2;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #sbsr-1076 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sbsr-1076 .cs-content {
+    max-width: 27.0625rem;
+  }
+  #sbsr-1076 .cs-image-group {
+    font-size: min(1.2vw, 1em);
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-608 {
+    padding: var(--sectionPadding);
+    background-color: #f1f1f4;
+  }
+  #reviews-608 .cs-container {
+    width: 100%;
+    /* changes to 1440px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-608 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-608 .cs-title {
+    max-width: 20ch;
+  }
+  #reviews-608 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #reviews-608 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 32px - 48px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 7vw, 3rem) clamp(1rem, 4vw, 2rem);
+    /* makes padding not affect height and width */
+    box-sizing: border-box;
+    background-color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-608 .cs-icon {
+    /* 30px - 40px */
+    width: clamp(1.875rem, 4vw, 2.5rem);
+    height: auto;
+    margin: 0 0 2rem 0;
+    display: block;
+  }
+  #reviews-608 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: var(--headerColor);
+  }
+  #reviews-608 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    line-height: 2em;
+    max-width: 24.25rem;
+    margin: 0 0 3rem 0;
+    color: var(--bodyTextColor);
+  }
+  #reviews-608 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin: auto 0 0 0;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  #reviews-608 .cs-name:before {
+    content: "";
+    width: 0.5rem;
+    height: 1px;
+    background: currentColor;
+    display: block;
+    position: relative;
+  }
+  #reviews-608 .cs-img {
+    width: clamp(7.25rem, 18vw, 8.5rem);
+    height: clamp(1.25rem, 3.2vw, 1.5rem);
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-608 .cs-container {
+    max-width: 90rem;
+  }
+  #reviews-608 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #reviews-608 .cs-item {
+    width: 48.5%;
+  }
+}
+/* Small Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #reviews-608 .cs-card-group {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  #reviews-608 .cs-item {
+    width: clamp(23.45%, 23.2vw, 23.9%);
+  }
+}
+/* Carousel container: lays out review slides horizontally and enables dragging */
+#reviews-608 .reviews-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+  padding-bottom: 1rem;
+}
+/* Hide the default scrollbar on WebKit browsers */
+#reviews-608 .reviews-carousel::-webkit-scrollbar {
+  display: none;
+}
+/* Navigation arrow buttons */
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.carousel-arrow {
+  background-color: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+/* Mobile view adjustments: Make each slide take full width and
+     display review items horizontally rather than in a column */
+@media only screen and (min-width: 0rem) {
+  #reviews-608 .cs-card-group {
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    /* changed from column to row */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+/* Tablet & Desktop styles can be adjusted further if needed */
+@media only screen and (min-width: 48rem) {
+  #reviews-608 .cs-container {
+    max-width: 90%;
+  }
+}
+/* Carousel container: horizontal scrolling with smooth behavior */
+#reviews-608 .reviews-carousel {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+  /* Enable scroll snapping */
+  scroll-snap-type: x mandatory;
+}
+/* Hide scrollbar on WebKit browsers */
+#reviews-608 .reviews-carousel::-webkit-scrollbar {
+  display: none;
+}
+/* The list of cards arranged in a single horizontal row */
+#reviews-608 .cs-card-group {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+/* Card item styling */
+#reviews-608 .cs-item {
+  background: #cccccc;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  /* Enable scroll snap alignment */
+  scroll-snap-align: center;
+  /* Mobile: take up 80% of viewport width; Desktop: show 4 per row */
+  flex: 0 0 80vw;
+}
+/* Navigation arrows container */
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+/* Arrow buttons */
+.carousel-arrow {
+  background-color: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+/* Mobile adjustments */
+@media only screen and (min-width: 0px) {
+  /* Center the first card by adding padding to the carousel */
+  #reviews-608 .carousel-arrows {
+    display: none;
+  }
+}
+/* Mobile adjustments */
+@media only screen and (max-width: 767px) {
+  /* Center the first card by adding padding to the carousel */
+  #reviews-608 .reviews-carousel {
+    padding-left: calc((100vw - 80vw) / 2);
+    padding-right: calc((100vw - 80vw) / 2);
+  }
+}
+/* Tablet & Desktop: show multiple items per view */
+@media only screen and (min-width: 768px) {
+  #reviews-608 .cs-item {
+    flex: 0 0 calc((100% - 3rem) / 4);
+    /* 4 cards per row with gap */
+  }
+  /* Remove extra horizontal padding on the carousel */
+  #reviews-608 .reviews-carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #reviews-608 .carousel-arrows {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  #reviews-608 .reviews-carousel {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    padding: 0 !important;
+  }
+  #reviews-608 .cs-card-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 0 10%;
+  }
+  #reviews-608 .cs-item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  #reviews-608 .reviews-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  #reviews-608 .reviews-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  #reviews-608 .carousel-arrows {
+    display: none;
+  }
+}
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-11601 {
+    /* 200px - 300px - leaving extra space for the navigation */
+    padding: clamp(12.5rem, 31.95vw, 18.75rem) 1rem 0;
+    /* 150px - 300px */
+    padding-bottom: clamp(9.375rem, 22vw, 18.75rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-11601 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #hero-11601 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #hero-11601 .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #hero-11601 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 51.8125rem;
+    margin: 0 0 1rem 0;
+    color: #fff;
+    position: relative;
+  }
+  #hero-11601 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    /* 464px - 622px */
+    max-width: clamp(29rem, 60vw, 38.785rem);
+    margin: 0 0 2.5rem 0;
+    color: #fff;
+  }
+  #hero-11601 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-11601 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: var(--buttonBackgroundColor);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-11601 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-11601 .cs-graphic {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+  #hero-11601 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero-11601 .cs-background:before {
+    /* Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #897361ab;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero-11601 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
+  }
+  #hero-11601 .cs-button-transparent {
+    z-index: 1;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bodyTextColorWhite);
+    margin: 0 0.5rem;
+    background-color: transparent;
+    /* 46px - 56px */
+    height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    font-weight: 700;
+    color: #fff;
+  }
+  #hero-11601 .cs-button-transparent .cs-img {
+    display: block;
+    margin-right: 0.75rem;
+  }
+  #hero-11601 .cs-button-transparent:before {
+    z-index: -1;
+    position: absolute;
+    /* so it sits on top of the border */
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    opacity: 1;
+    /* this is what creates the grow affect on hover */
+    transform: scaleX(0);
+    display: block;
+    background: var(--primary);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  #hero-11601 .cs-button-transparent:hover:before {
+    transform: scaleX(1);
+  }
+}
+/* Large Desktop - 1600px - Prallax Effect */
+@media only screen and (min-width: 100rem) {
+  #hero-11601 .cs-background {
+    background: url("/assets/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #hero-11601 .cs-background img {
     display: none;
   }
 }

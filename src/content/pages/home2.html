@@ -2,10 +2,10 @@
 title: 'Brit Albin Art | Home | Tulsa Ok'
 description: ''
 preloadImg: ''
-permalink: '/'
+permalink: '/home2'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
-  key: Home
+  key: Home2
   order: 100
 ---
 
@@ -78,35 +78,10 @@ eleventyNavigation:
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <!-- <section id="hero">
+    <section id="hero2">
         <div class="cs-container">
             <div class="cs-flex-group">
-                <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Faith-Driven Art That Tells <span style="font-family: 'Trirong';font-weight: 300;font-style: italic;">Your</span> Story</h1>
-                <p class="cs-text" style="font-family: 'Rasa';font-size: 1.2em;">
-                    Bringing Faith to life through story driven art that fills your home with a story worth sharing.
-                </p>
-                <a href="/gallery" class="cs-button-solid" style="font-family: 'Rasa';font-weight: 600;">Shop</a>
-                <a href="/contact" class="cs-button-transparent" style="font-family: 'Rasa';font-weight: 600;">
-                    CONTACT
-                </a>
-            </div>
-        </div>
-
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/landing1.jpg' | resize({ width: 500, height:500}) | webp %}">
-            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/landing1.jpg' | resize({ width: 1500, height:1500}) | webp %}">
-            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/landing1.jpg' | resize({ width: 1500, height:1500}) | webp %}" alt="new home" width="2500" height="1667" loading="eager">
-        </picture>
-    </section> -->
-
-
-        <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
-
-    <!-- <section id="hero2">
-        <div class="cs-container">
-            <div class="cs-flex-group">
+                <!-- <span class="cs-topper">mountain hiking society</span> -->
                 <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Faith-Driven Art That Tells <span style="font-family: 'Trirong';font-weight: 300;font-style: italic;">Your</span> Story</h1>
                 <p class="cs-text" style="font-family: 'Rasa';font-size: 1.2em;">
                     Bringing Faith to Life Through Story-Driven Art That Fills Your Home with a Story Worth Sharing.
@@ -118,42 +93,13 @@ eleventyNavigation:
             </div>
         </div>
 
+        <!-- Background Image -->
         <picture class="cs-picture">
             <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/hero.jpg' | resize({ width: 500, height:500}) | webp %}">
             <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/hero.jpg' | resize({ width: 1500, height:1500}) | webp %}">
             <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/hero.jpg' | resize({ width: 1500, height:1500}) | webp %}" alt="new home" width="2500" height="1667" loading="eager">
         </picture>
-    </section> -->
-    <!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
-
-<section id="hero-11601">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper"></span>
-            <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Faith-Driven Art That Tells <span style="font-family: 'Trirong';font-weight: 300;font-style: italic;">Your</span> Story</h1>
-            <p class="cs-text" style="font-family: 'Rasa';font-size: 1.2em;">
-                Bringing Faith to Life Through Story-Driven Art That Fills Your Home with a Story Worth Sharing.
-            </p>
-            <!-- <a href="/gallery" class="cs-button-solid" style="font-family: 'Rasa';font-weight: 600;">Shop</a> -->
-                <a href="/shop" class="cs-button-transparent" style="font-family: 'Rasa';font-weight: 600;">Shop</a>
-                <!-- <img src="/assets/images/shopping-cart.svg" width="20" height="20" aria-hidden="true" decoding="async" style="filter: invert(1);"> -->
-        </div>
-    </div>
-
-    <!--SVG V Graphic-->
-    <!-- <img class="cs-graphic" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/centered-v.svg" alt="graphic" width="1920" height="163" aria-hidden="true"> -->
-
-    <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/hero.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/hero.jpg">
-        <img decoding="async" src="/assets/images/hero.jpg" alt="garage" width="2250" height="1500" aria-hidden="true">
-    </picture>
-    
-</section>
-
+    </section>
 
     
 
@@ -298,86 +244,59 @@ eleventyNavigation:
                 <!-- Row 1-->
                 <div class="cs-row cs-row-1">
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <a href="https://www.instagram.com/p/DFN6caERKcj/" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/Cp6HqwTA45E/" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/CvI8NWsLd4R/?img_index=1" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/arrow.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/arrow.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/arrow.jpg" alt="new hallway" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/brushes.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/brushes.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/brushes.jpg" alt="new home construction" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/roses.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/roses.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/roses.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
+                    </picture>
                 </div>
                 <!-- Row 2 -->
                 <div class="cs-row cs-row-2">
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <a href="https://www.instagram.com/p/CLDV_fQlx4I/" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/DGiwrfZxmU8/" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/Ctu0XZMt6FE/?img_index=1" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/crown.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/crown.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/crown.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/sunrise.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/sunrise.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/sunrise.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/wing.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/wing.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/wing.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
+                    </picture>
                 </div>
                 <!-- Row 3 -->
                 <div class="cs-row cs-row-3">
                     <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <a href="https://www.instagram.com/p/CdzJiN-r-zv/?img_index=1" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/Ccf10f0reLc/?img_index=1" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
-                    <a href="https://www.instagram.com/p/CsoNdTfOVuB/?img_index=1" target="_blank">
-
-                        <picture class="cs-picture cs-picture1">
-                            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height:1000}) | webp %}">
-                            <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="new hallway" loading="lazy" width="400" height="560">
-                        </picture>
-                    </a>
+                    <picture class="cs-picture cs-picture1">
+                        <source media="(max-width: 600px)" srcset="/assets/images/wings.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/wings.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/wings.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <source media="(max-width: 600px)" srcset="/assets/images/hands.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/hands.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/hands.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
+                    </picture>
+                    <picture class="cs-picture cs-picture3">
+                        <source media="(max-width: 600px)" srcset="/assets/images/gold.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/gold.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/gold.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
+                    </picture>
 
                 </div>
             </div>
@@ -402,7 +321,7 @@ eleventyNavigation:
       </div>
   
       <!-- Carousel wrapper containing a single list of review cards -->
-      <div class="reviews-carousel">
+      <div class="reviews-carousel" style="margin: auto;">
         <ul class="cs-card-group" >
           <li class="cs-item">
             <!-- <img aria-hidden="true"  style="width: 100%;border-radius: 8px;margin-bottom: 0.5rem;"  decoding="async" src="{% getUrl '/assets/images/gold.jpg' | resize({ width: 500, height:500}) | webp %}" alt="kew kitchen cabinets" loading="lazy"> -->
@@ -460,13 +379,15 @@ eleventyNavigation:
       </div>
   
       <div class="carousel-arrows">
-        <button class="carousel-arrow left" style="color: white;">&lt;</button>
-        <button class="carousel-arrow right" style="color: white;">&gt;</button>
+        <button class="carousel-arrow left">&lt;</button>
+        <button class="carousel-arrow right">&gt;</button>
       </div>
       <!-- Navigation arrows -->
     </div>
   </section>
- 
+  
+  
+  
                                 
 <!-- ============================================ -->
 <!--                   Reviews                    -->
