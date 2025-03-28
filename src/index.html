@@ -245,26 +245,26 @@ eleventyNavigation:
             <!--Top left image-->
             <picture class="cs-picture cs-picture1">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic4.jpg">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/IMG_1.jpg' | resize({ width: 500, height:500}) | webp %}">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic4.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/mechanic4.jpg" alt="mechanic" width="217" height="440">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/IMG_1.jpg' | resize({ width: 500, height:500}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/IMG_1.jpg' | resize({ width: 500, height:500}) | webp %}" alt="mechanic" width="217" height="440">
             </picture>
             <!--Middle image-->
             <picture class="cs-picture cs-picture2">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/painter.jpg">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/IMG_3.jpg' | resize({ width: 500, height:500}) | webp %}">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/painter.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/painter.jpg" alt="mechanic" width="305" height="600">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/IMG_3.jpg' | resize({ width: 500, height:500}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/IMG_3.jpg' | resize({ width: 500, height:500}) | webp %}" alt="mechanic" width="305" height="600">
             </picture>
             <!--Bottom right image-->
             <picture class="cs-picture cs-picture3">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/crown.jpg">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/IMG_2.jpg' | resize({ width: 500, height:500}) | webp %}">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/crown.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/crown.jpg" alt="mechanic" width="216" height="440">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/IMG_2.jpg' | resize({ width: 500, height:500}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/IMG_2.jpg' | resize({ width: 500, height:500}) | webp %}" alt="mechanic" width="216" height="440">
             </picture>
             <!--Stripe background-->
             <img class="cs-stripes" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/stripes.svg" alt="stripes" width="509" height="535" aria-hidden="true">
