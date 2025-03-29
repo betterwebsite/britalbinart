@@ -290,14 +290,11 @@ eleventyNavigation:
     <!--                   Gallery                    -->
     <!-- ============================================ -->
 
-    <section id="gallery">
+    <!-- <section id="gallery">
         <div class="cs-container">
-            <!-- <span class="cs-topper">Our Portfolio</span> -->
             <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Beautiful Stories</h2>
             <div class="cs-image-group">
-                <!-- Row 1-->
                 <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <a href="https://www.instagram.com/p/DFN6caERKcj/" target="_blank">
 
                         <picture class="cs-picture cs-picture1">
@@ -323,9 +320,7 @@ eleventyNavigation:
                         </picture>
                     </a>
                 </div>
-                <!-- Row 2 -->
                 <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <a href="https://www.instagram.com/p/CLDV_fQlx4I/" target="_blank">
 
                         <picture class="cs-picture cs-picture1">
@@ -351,9 +346,7 @@ eleventyNavigation:
                         </picture>
                     </a>
                 </div>
-                <!-- Row 3 -->
                 <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
                     <a href="https://www.instagram.com/p/CdzJiN-r-zv/?img_index=1" target="_blank">
 
                         <picture class="cs-picture cs-picture1">
@@ -381,9 +374,81 @@ eleventyNavigation:
 
                 </div>
             </div>
-            <!-- <a href="/projects" class="cs-button-solid">View Full Gallery</a> -->
         </div>
-    </section>
+    </section> -->
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-48">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Beautiful Stories</h2>
+        </div>
+        <div class="cs-image-group">
+            <!-- Row 1 -->
+            <div class="cs-row cs-row-1">
+                <picture class="cs-picture cs-picture-1" onclick="window.open('https://www.instagram.com/p/DFN6caERKcj/', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port1.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="new hallway" width="420" height="567">
+                </picture>
+                <picture class="cs-picture cs-picture-2" onclick="window.open('https://www.instagram.com/p/CLDV_fQlx4I/', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port4.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="new home construction" width="420" height="629">
+                </picture>
+                <picture class="cs-picture cs-picture-3" onclick="window.open('https://www.instagram.com/p/CdzJiN-r-zv/?img_index=1', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port7.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="building a new wall" width="420" height="512">
+                </picture>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="cs-row cs-row-2">
+                <picture class="cs-picture cs-picture-1" onclick="window.open('https://www.instagram.com/p/Cp6HqwTA45E/', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port2.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="new kitchen" width="420" height="492">
+                </picture>
+                <picture class="cs-picture cs-picture-2" onclick="window.open('https://www.instagram.com/p/DGiwrfZxmU8/', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port5.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="apartment addition" width="420" height="517">
+                </picture>
+                <picture class="cs-picture cs-picture-3" onclick="window.open('https://www.instagram.com/p/Ccf10f0reLc/?img_index=1', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port8.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="new kitchen cabinets" width="420" height="629">
+                </picture>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="cs-row cs-row-3">
+                <picture class="cs-picture cs-picture-1" onclick="window.open('https://www.instagram.com/p/CvI8NWsLd4R/?img_index=1', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port3.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="new black window structure" width="420" height="625">
+                </picture>
+                <picture class="cs-picture cs-picture-2" onclick="window.open('https://www.instagram.com/p/Ctu0XZMt6FE/?img_index=1', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port6.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="kitchen renovation" width="420" height="452">
+                </picture>
+                <picture class="cs-picture cs-picture-3" onclick="window.open('https://www.instagram.com/p/CsoNdTfOVuB/?img_index=1', '_blank')">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/portfolio/port9.jpg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="bathroom renovation" width="420" height="629">
+                </picture>
+            </div>
+        </div>
+        <!-- <a href="" class="cs-button-solid">View Full Gallery</a> -->
+    </div>
+</section>
+
+                                
 <!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
