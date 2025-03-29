@@ -10,10 +10,10 @@
     <div class="cs-container">
         <picture class="cs-picture cs-picture1">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="/assets/images/custom.jpg">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/custom.jpeg' | resize({ width: 500, height:500}) | webp %}">
             <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="/assets/images/custom.jpg">
-            <img loading="lazy" decoding="async" src="/assets/images/custom.jpg" alt="wedding" width="384" height="509">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/custom.jpeg' | resize({ width: 1000, height:1000}) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/custom.jpeg' | resize({ width: 1000, height:1000}) | webp %}" alt="wedding" width="384" height="509">
         </picture>
         <div class="cs-content">
             <span class="cs-topper"></span>

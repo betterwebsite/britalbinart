@@ -356,7 +356,7 @@
   }
   #hero-shop .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-size: clamp(3rem, 3rem, 5rem);
     font-weight: 700;
     line-height: 1.2em;
     text-align: inherit;
