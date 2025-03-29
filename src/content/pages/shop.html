@@ -1,0 +1,277 @@
+---
+title: 'Shop | Brit Albin Art'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'shop/'
+eleventyNavigation:
+    key: Shop
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/shop.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1160">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Find Your Story</h1>
+            <p class="cs-text">
+                 
+            </p>
+            <a href="https://payhip.com/BritAlbinArt" class="cs-button-solid">My Store</a>
+        </div>
+    </div>
+
+    <!--SVG V Graphic-->
+    <!-- <img class="cs-graphic" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/centered-v.svg" alt="graphic" width="1920" height="163" aria-hidden="true"> -->
+
+    <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/about.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/about.jpg">
+        <img decoding="async" src="/assets/images/about.jpg" alt="garage" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+                                
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <!-- <section id="int-hero">
+        <h1 id="home-h">About Us</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+
+    </section> -->
+
+
+    <!-- ============================================ -->
+<!--                 Collection                   -->
+<!-- ============================================ -->
+
+<section id="collection-1624">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">New Stories</h2>
+            <!-- <a href="" class="cs-button-solid">View All Collection</a> -->
+        </div>
+        <div class="cs-collection-wrapper">
+            <div class="cs-item-offer">
+                <div class="cs-text-wrapper">
+                    <!-- <span class="cs-offer-tag">ONLY $20</span> -->
+                    <h3 class="cs-h3">Latest Collections</h3>
+                    <!-- <span class="cs-item-text">Special seasonal offer of the month</span> -->
+                    <!-- <a class="cs-button-solid" href="/">Shop Now</a> -->
+                </div>
+                <picture class="cs-background" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/IMG_2.jpeg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/IMG_2.jpeg' | resize({ width: 1000, height: 1000 }) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/IMG_2.jpeg' | resize({ width: 1000, height: 1000 }) | webp %}" alt="model" width="365" height="201">
+                </picture>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/g9eji" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/GoldCross2.jpg'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/GoldCross2.jpg'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/GoldCross2.jpg'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Mended At The Cross #2 - 4 X 12 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$68.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/wNt12" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/GoldCross3.jpg'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/GoldCross3.jpg'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/GoldCross3.jpg'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Mended At The Cross #3 - 4 X 12 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$60.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/aDQzO" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/8x16.jpg'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/8x16.jpg'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/8x16.jpg'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Mended At The Cross - 8 X 16 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$120.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/odDYA" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/window.png'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/window.png'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/window.png'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Window Pane Cross - 8 X 16 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$135.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/O9pKS" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/8x16.jpg'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/8x16.jpg'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/8x16.jpg'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Mended At The Cross - 10 X 20 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$215.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/2LYqo" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/shop/GoldCross24X48.jpg'  %}">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/shop/GoldCross24X48.jpg'  %}">
+                                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/shop/GoldCross24X48.jpg'  %}" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Mended At The Cross - 24 X 48 Original</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$800.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/isRvz" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="/assets/images/shop/clock.jpg">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="/assets/images/shop/clock.jpg">
+                                <img loading="lazy" decoding="async" src="/assets/images/shop/clock.jpg" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">"For Such A Time As This" Archival Giclee Paper Prints</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$35.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="https://payhip.com/b/pBeF0" class="cs-link">
+                        <div class="cs-image-group">
+                            <picture class="cs-picture">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="/assets/images/shop/clock2.jpg">
+                                <!--Tablet and above Image-->
+                                <source media="(min-width: 601px)" srcset="/assets/images/shop/clock2.jpg">
+                                <img loading="lazy" decoding="async" src="/assets/images/shop/clock2.jpg" alt="painting" width="1280" height="1280">
+                            </picture>
+                            <!-- <span class="cs-offer"></span> -->
+                        </div>
+                        <div class="cs-details">
+                            <h3 class="cs-product">Limited Edition "For Such A Time As This" Gallery Wrapped Canvas Print</h3>
+                            <div class="cs-wrapper">
+                                <div class="cs-flex">
+                                    <span class="cs-price">$225.00</span>
+                                    <!-- <span class="cs-old-price">$45.00</span> -->
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
