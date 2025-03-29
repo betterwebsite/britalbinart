@@ -180,6 +180,7 @@
     overflow: hidden;
   }
   #collection-1624 .cs-picture img {
+    max-height: 25rem;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -303,5 +304,205 @@
   }
   body.dark-mode #collection-1624 .cs-picture {
     background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+/*
+*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-shop {
+    /* 200px - 300px - leaving extra space for the navigation */
+    padding: clamp(12.5rem, 31.95vw, 18.75rem) 1rem 0;
+    /* 150px - 300px */
+    padding-bottom: clamp(9.375rem, 22vw, 18.75rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-shop .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #hero-shop .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #hero-shop .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #hero-shop .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 51.8125rem;
+    margin: 0 0 1rem 0;
+    color: #fff;
+    position: relative;
+  }
+  #hero-shop .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    /* 464px - 622px */
+    max-width: clamp(29rem, 60vw, 38.785rem);
+    margin: 0 0 2.5rem 0;
+    color: #fff;
+  }
+  #hero-shop .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-shop .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: var(--buttonBackgroundColor);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-shop .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-shop .cs-graphic {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+  }
+  #hero-shop .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero-shop .cs-background:before {
+    /* Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #897361ab;
+    opacity: 0.84;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero-shop .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
+  }
+  #hero-shop .cs-button-transparent {
+    z-index: 1;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bodyTextColorWhite);
+    margin: 0 0.5rem;
+    background-color: transparent;
+    /* 46px - 56px */
+    height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    font-weight: 700;
+    color: #fff;
+  }
+  #hero-shop .cs-button-transparent .cs-img {
+    display: block;
+    margin-right: 0.75rem;
+  }
+  #hero-shop .cs-button-transparent:before {
+    z-index: -1;
+    position: absolute;
+    /* so it sits on top of the border */
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    content: "";
+    opacity: 1;
+    /* this is what creates the grow affect on hover */
+    transform: scaleX(0);
+    display: block;
+    background: var(--primary);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  #hero-shop .cs-button-transparent:hover:before {
+    transform: scaleX(1);
+  }
+}
+/* Large Desktop - 1600px - Prallax Effect */
+@media only screen and (min-width: 100rem) {
+  #hero-shop .cs-background {
+    background: url("/assets/images/shop/bg_brown.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #hero-shop .cs-background img {
+    display: none;
   }
 }

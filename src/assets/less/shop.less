@@ -201,6 +201,7 @@
             overflow: hidden;
 
             img {
+                max-height: 25rem;
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
@@ -360,3 +361,229 @@
 }
                                 
 
+
+
+
+/*
+*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-shop {
+        /* 200px - 300px - leaving extra space for the navigation */
+        padding: clamp(12.5rem, 31.95vw, 18.75rem) (16/16rem) 0;
+        /* 150px - 300px */
+        padding-bottom: clamp(9.375rem, 22vw, 18.75rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (630/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: inherit;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: (4/16rem);
+            display: block;
+        }
+
+        .cs-title {
+            /* 39px - 61px */
+            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            text-align: inherit;
+            max-width: (829/16rem);
+            margin: 0 0 (16/16rem) 0;
+            color: #fff;
+            position: relative;
+        }
+
+        .cs-text {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 1.95vw, 1.25rem);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            /* 464px - 622px */
+            max-width: clamp(29rem, 60vw, 38.785rem);
+            margin: 0 0 (40/16rem) 0;
+            color: #fff;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0;
+            color: #fff;
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: var(--buttonBackgroundColor);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-graphic {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+
+            &:before {
+                /* Overlay */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #897361ab;
+                opacity: 0.84;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                /* prevents the cursor from interacting with it */
+                pointer-events: none;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                /* makes the top of the image start at the top of the parent */
+                object-position: top;
+            }
+        }
+        .cs-button-transparent {
+            z-index: 1;
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--bodyTextColorWhite);
+            margin: 0 (8/16rem);
+            background-color: transparent;
+            /* 46px - 56px */
+            height: clamp(2.875em, 5.5vw, 3.5em);
+            width: (180/16rem);
+            box-sizing: border-box;
+            padding: 0;
+            text-decoration: none;
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            font-weight: 700;
+            color: #fff;
+
+            .cs-img {
+                display: block;
+                margin-right: (12/16rem);
+            }
+
+            &:before {
+                z-index: -1;
+                position: absolute;
+                /* so it sits on top of the border */
+                top: -1px;
+                bottom: -1px;
+                left: -1px;
+                right: -1px;
+                content: "";
+                opacity: 1;
+                /* this is what creates the grow affect on hover */
+                transform: scaleX(0);
+                display: block;
+                background: var(--primary);
+                transition: transform 0.3s;
+                transform-origin: left;
+            }
+
+            &:hover {
+                &:before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+/* Large Desktop - 1600px - Prallax Effect */
+@media only screen and (min-width: 100rem) {
+    #hero-shop {
+        .cs-background {
+            background: url("/assets/images/shop/bg_brown.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            img {
+                display: none;
+            }
+        }
+    }
+}
