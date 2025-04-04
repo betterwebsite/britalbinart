@@ -10,16 +10,16 @@
           "feature_image": "/assets/images/blog/10.jpg"
         },
         {
-          "title": "Mended At The Cross (First Original of this Collection)",
-          "feature_image": "/assets/images/blog/1.jpg",
-          "price": 300,
-          "url": "https://payhip.com/b/fhGVL"
-        },
-        {
           "url": "https://payhip.com/b/2LYqo",
           "price": 1150,
           "feature_image": "/assets/images/blog/2.jpg",
           "title": "Mended At The Cross - 24 X 48 Original"
+        },
+        {
+          "title": "Mended At The Cross (First Original of this Collection)",
+          "feature_image": "/assets/images/blog/1.jpg",
+          "price": 300,
+          "url": "https://payhip.com/b/fhGVL"
         },
         {
           "price": 215,
