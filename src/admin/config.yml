@@ -10,7 +10,7 @@ media_folder: "src/assets/images/blog"
 public_folder: "/assets/images/blog"
 
 collections:
-    # Listings CONFIG
+    # Listings CONFIG 
     # Paintings CONFIG (converted from file-based to folder-based collection)
     # Art Collections CONFIG
     - label: Art Collections
