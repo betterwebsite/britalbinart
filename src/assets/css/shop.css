@@ -493,16 +493,3 @@
     transform: scaleX(1);
   }
 }
-/* Large Desktop - 1600px - Prallax Effect */
-@media only screen and (min-width: 100rem) {
-  #hero-shop .cs-background {
-    background: url("/assets/images/shop/bg_brown.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  #hero-shop .cs-background img {
-    display: none;
-  }
-}

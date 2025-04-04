@@ -1,0 +1,72 @@
+{
+  "collections": [
+    {
+      "title": "Mended At The Cross",
+      "paintings": [
+        {
+          "title": "Mended At The Cross Lined Journal",
+          "url": "https://payhip.com/b/6DEUj",
+          "price": 20,
+          "feature_image": "/assets/images/blog/10.jpg"
+        },
+        {
+          "title": "Mended At The Cross (First Original of this Collection)",
+          "feature_image": "/assets/images/blog/1.jpg",
+          "price": 300,
+          "url": "https://payhip.com/b/fhGVL"
+        },
+        {
+          "url": "https://payhip.com/b/2LYqo",
+          "price": 1150,
+          "feature_image": "/assets/images/blog/2.jpg",
+          "title": "Mended At The Cross - 24 X 48 Original"
+        },
+        {
+          "price": 215,
+          "url": "https://payhip.com/b/Of0l3",
+          "title": "Mended At The Cross 10 X 20 Original (Beige)",
+          "feature_image": "/assets/images/blog/3.jpg"
+        },
+        {
+          "url": "https://payhip.com/b/O9pKS",
+          "price": 80,
+          "title": "Mended At The Cross - 10 X 20 Original (Blue Grey)",
+          "feature_image": "/assets/images/blog/4.jpg"
+        },
+        {
+          "url": "https://payhip.com/b/XCqyh",
+          "price": 400,
+          "title": "Mended At The Cross - 12 X 36 Original & Prints",
+          "feature_image": "/assets/images/blog/5.jpg"
+        },
+        {
+          "url": "https://payhip.com/b/k0XvSt",
+          "title": "Mended At The Cross 4 X 12 (Framed)",
+          "price": 90,
+          "feature_image": "/assets/images/blog/6.jpg"
+        },
+        {
+          "title": "Mended At The Cross - 8 X 16 Originals",
+          "url": "https://payhip.com/b/odDYA",
+          "price": 145,
+          "feature_image": "/assets/images/blog/7.jpg"
+        },
+        {
+          "url": "https://payhip.com/b/ulDGo",
+          "title": "Mended At the Cross 4 X 12 Original",
+          "price": 85,
+          "feature_image": "/assets/images/blog/8.jpg"
+        },
+        {
+          "url": "https://payhip.com/b/ukbZ2",
+          "title": "Cross Ornament",
+          "price": 15,
+          "feature_image": "/assets/images/blog/9.jpg"
+        }
+      ],
+      "description_title": "This collection was born out of a deeply personal story.",
+      "description": "It began with a painting I created for a friend who was walking through a very painful divorce. After over a year of separation and ongoing legal battles, he asked me to create something for his soon-to-be ex-wife, a gift of encouragement, a symbol of hope. The painting was meant to remind them both that no matter the hurt of the past or the unknown future, God can redeem what feels broken beyond repair. Three months after receiving their painting and, after both friends surrendered their brokenness to Jesus, I received a text message I'll never forget: \"Your painting is in hanging in the center of OUR home.\" God restored their marriage! The painting now hangs in their living room with their initials on each side and has become a symbol of the restoration God brought to their family. What a God of restoration we serve!!!",
+      "background": "/assets/images/blog/bg_brown.jpg"
+    }
+  ]
+}

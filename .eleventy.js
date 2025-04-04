@@ -130,6 +130,15 @@ module.exports = function (eleventyConfig) {
                               END SERVER SETTINGS
     =======================================================================*/
 
+    eleventyConfig.addFilter("money", function(value) {
+        return value.toLocaleString('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        });
+    });
+
     return {
         dir: {
             input: "src",

@@ -9,5 +9,65 @@
     <body>
         <!-- Include the script that builds the page and powers Decap CMS -->
         <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.6.2/dist/decap-cms.js"></script>
+        <script src="/admin/custom-widgets/paintingspreview.js"></script>  
+        <script>
+           window.addEventListener('message', function(e) {
+  if (e.data.action === 'focusPaintingByTitle') {
+    var collectionIndex = e.data.collectionIndex;
+    var paintingIndex = e.data.paintingIndex;
+
+    // Get the main collections container.
+    var collectionsContainer = document.getElementById('collections-field-1');
+    if (!collectionsContainer) {
+      console.warn('Collections container not found');
+      return;
+    }
+    
+    // Get collection elements by selecting direct child divs that are not the header.
+    // In our case, the header container has the class "css-1265b6l-TopBarContainer".
+    var collectionElements = collectionsContainer.querySelectorAll(':scope > div:not(.css-1265b6l-TopBarContainer)');
+    if (collectionElements.length <= collectionIndex) {
+      console.warn('Collection not found for index:', collectionIndex);
+      return;
+    }
+    var collectionElement = collectionElements[collectionIndex];
+    
+    // Locate the paintings container inside the collection.
+    // This container should have an id starting with "paintings-field-".
+    var paintingsContainer = collectionElement.querySelector('[id^="paintings-field-"]');
+    if (!paintingsContainer) {
+      console.warn('Paintings container not found in collection index:', collectionIndex);
+      return;
+    }
+    
+    // Within the paintings container, the first child is the header (with the expand and add buttons),
+    // and the second child is assumed to be the wrapper containing the painting items.
+    if (paintingsContainer.children.length < 2) {
+      console.warn('No paintings wrapper found in paintings container for collection index:', collectionIndex);
+      return;
+    }
+    var paintingsWrapper = paintingsContainer.children[1];
+    
+    // Get the painting items.
+    var paintingItems = paintingsWrapper.children;
+    if (paintingItems.length <= paintingIndex) {
+      console.warn('Painting not found for index:', paintingIndex);
+      return;
+    }
+    var paintingElement = paintingItems[paintingIndex];
+    
+    // Scroll to the painting element, focus it, and add a temporary highlight.
+    paintingElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    paintingElement.focus();
+    paintingElement.classList.add('highlighted');
+    setTimeout(function() {
+      paintingElement.classList.remove('highlighted');
+    }, 2000);
+  }
+});
+
+
+
+        </script>
     </body>
 </html>

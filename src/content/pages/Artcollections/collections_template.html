@@ -1,0 +1,217 @@
+---
+pagination:
+  data: Artcollections.collections
+  size: 1
+  alias: collection
+  addAllPagesToCollections: true
+permalink: "Artcollections/{{ collection.title | slugify }}/"
+---
+
+
+
+{% extends "layouts/base.html" %}
+{% block head %}
+<link rel="stylesheet" href="/assets/css/shop.css">
+
+
+<style>
+/* Large Desktop - 1600px - Prallax Effect */
+@media only screen and (min-width: 100rem) {
+    #hero-shop {
+        .cs-background {
+            {% if collection.background %}
+            background: url("{{ collection.background }}");
+            {% else %}
+            background: url("/assets/images/shop/bg_brown.jpg");
+            {% endif %}
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            img {
+                display: none;
+            }
+        }
+        
+    }
+}
+
+
+</style>
+
+
+{% endblock %}
+
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-shop">
+  <div class="cs-container">
+      <div class="cs-content">
+          <span class="cs-topper"></span>
+          <!-- <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Mended At The<br> Cross Collection</h1> -->
+          <h1 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">{{ collection.title }}</h1>
+          
+          <p class="cs-text">
+               
+          </p>
+          <!-- <a href="https://payhip.com/BritAlbinArt" class="cs-button-solid">My Store</a> -->
+      </div>
+  </div>
+
+  <!--SVG V Graphic-->
+  <!-- <img class="cs-graphic" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/centered-v.svg" alt="graphic" width="1920" height="163" aria-hidden="true"> -->
+
+  <!-- Background Image, also BG Image is set in CSS at 1600px wide for parallax effect -->
+  {% if collection.background %}
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="{{ collection.background }}">
+      <source media="(min-width: 601px)" srcset="{{ collection.background }}">
+      <img decoding="async" src="{{ collection.background }}" alt="garage" width="2250" height="1500" aria-hidden="true">
+  </picture>
+  {% else %}
+  <picture class="cs-background">
+      <source media="(max-width: 600px)" srcset="/assets/images/shop/bg_brown.jpg">
+      <source media="(min-width: 601px)" srcset="/assets/images/shop/bg_brown.jpg">
+      <img decoding="async" src="/assets/images/shop/bg_brown.jpg" alt="garage" width="2250" height="1500" aria-hidden="true">
+  </picture>
+  {% endif %}
+</section>
+
+
+<div class="custom-shape-divider-top-1743380496">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<style>
+  .custom-shape-divider-top-1743380496 {
+  position: relative;
+  top: -0.5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1743380496 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 92px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1743380496 .shape-fill {
+  fill: #8e7c6a;
+}
+</style>
+
+
+
+
+{% if collection.description_title and collection.description %}
+<section id="sbs">
+  <div class="cs-container">
+      <div class="cs-right" style="display: flex;flex-direction: column;align-items: center; padding: 3em;">
+          <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">{{ collection.description_title }}</h2>
+          <p class="cs-text" style="text-align: center;">
+            {{ collection.description }}
+          </p>
+          <p class="cs-text">
+              
+          </p>
+      </div>
+  </div>
+</section>
+{% endif %}
+
+
+
+
+    <!-- ============================================ -->
+<!--                 Collection                   -->
+<!-- ============================================ -->
+
+<section id="collection-1624">
+  <div class="cs-container">
+      <div class="cs-content">
+          <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;"><a href="https://payhip.com/BritAlbinArt" class="cs-button-solid">My Store</a></h2>
+          
+          <!-- <a href="" class="cs-button-solid">View All Collection</a> -->
+      </div>
+      <div class="cs-collection-wrapper">
+          <ul class="cs-card-group">
+            {% for painting in collection.paintings  %}
+              <li class="cs-item">
+                  <a href="{{ painting.url }}" class="cs-link">
+                      <div class="cs-image-group">
+                          <picture class="cs-picture">
+                              <!--Mobile Image-->
+                              <source media="(max-width: 600px)" srcset="{{ painting.feature_image }}">
+                              <!--Tablet and above Image-->
+                              <source media="(min-width: 601px)" srcset="{{ painting.feature_image }}">
+                              <img loading="lazy" decoding="async" src="{{ painting.feature_image }}" alt="painting" width="1280" height="1280">
+                          </picture>
+                          <!-- <span class="cs-offer"></span> -->
+                      </div>
+                      <div class="cs-details">
+                          <h3 class="cs-product">{{ painting.title }}</h3>
+                          <div class="cs-wrapper">
+                              <div class="cs-flex">
+                                  <span class="cs-price">{{ painting.price | money }}</span>
+                                  <!-- <span class="cs-old-price">$45.00</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</section>
+<div style="display: flex;flex-direction: column;align-items: center;">
+
+  <a href="/contact" class="cs-button-solid" style="color: white;">Contact For Custom Sizes</a>
+</div>
+
+
+<div class="custom-shape-divider-bottom-1743381112">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<style>
+  .custom-shape-divider-bottom-1743381112 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1743381112 svg {
+  position: relative;
+  display: block;
+  width: calc(297% + 1.3px);
+  height: 92px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1743381112 .shape-fill {
+  fill: #FBF5F1;
+}
+</style>
+
+
+{% include 'components/cta.html' %}
+
+{% endblock %}
