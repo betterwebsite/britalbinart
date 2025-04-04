@@ -75,14 +75,24 @@
       "description": " The raising areas collection is based on Psalm 127:4-5 “Children are a heritage form the Lord. Like Arrows in the hands of a warrior are the children of one’s youth. Blessed is the man who fills his quiver with them. \n\n\n\nThese paintings have become modern day family portraits and a heirloom of family legacy passed down generations.",
       "paintings": [
         {
-          "title": "Becca’s Arrows ",
+          "title": "Becca’s Arrows 36 X 48",
           "feature_image": "/assets/images/blog/img_9075.jpeg",
+          "price": 2150
+        },
+        {
+          "title": "Drew Brees Arrows 30 X 40",
+          "feature_image": "/assets/images/blog/img_7994.jpg",
           "price": 1850
         },
         {
-          "title": "Drew Brees Arrows",
-          "feature_image": "/assets/images/blog/img_7994.jpg",
-          "price": 1850
+          "title": "The Watsons Arrow Painting 48 X 60",
+          "feature_image": "/assets/images/blog/img_1043.jpeg",
+          "price": 3200
+        },
+        {
+          "title": "Demario and Tamela Davis Arrows 36 X 60",
+          "feature_image": "/assets/images/blog/davis-family-arrows.jpg",
+          "price": 2850
         }
       ]
     }
