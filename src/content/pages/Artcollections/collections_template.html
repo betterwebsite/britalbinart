@@ -164,7 +164,7 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
                           <h3 class="cs-product">{{ painting.title }}</h3>
                           <div class="cs-wrapper">
                               <div class="cs-flex">
-                                  <span class="cs-price">{{ painting.price | money }}</span>
+                                  <span class="cs-price">{% if painting.price %}{{ painting.price | money }}{% else %} contact{% endif %}</span>
                                   <!-- <span class="cs-old-price">$45.00</span> -->
                               </div>
                           </div>
