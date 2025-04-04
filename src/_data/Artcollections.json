@@ -10,16 +10,16 @@
           "feature_image": "/assets/images/blog/10.jpg"
         },
         {
-          "url": "https://payhip.com/b/2LYqo",
-          "price": 1150,
-          "feature_image": "/assets/images/blog/2.jpg",
-          "title": "Mended At The Cross - 24 X 48 Original"
-        },
-        {
           "title": "Mended At The Cross (First Original of this Collection)",
           "feature_image": "/assets/images/blog/1.jpg",
           "price": 300,
           "url": "https://payhip.com/b/fhGVL"
+        },
+        {
+          "url": "https://payhip.com/b/2LYqo",
+          "price": 1150,
+          "feature_image": "/assets/images/blog/2.jpg",
+          "title": "Mended At The Cross - 24 X 48 Original"
         },
         {
           "price": 215,
@@ -67,6 +67,19 @@
       "description_title": "This collection was born out of a deeply personal story.",
       "description": "It began with a painting I created for a friend who was walking through a very painful divorce. After over a year of separation and ongoing legal battles, he asked me to create something for his soon-to-be ex-wife, a gift of encouragement, a symbol of hope. The painting was meant to remind them both that no matter the hurt of the past or the unknown future, God can redeem what feels broken beyond repair. Three months after receiving their painting and, after both friends surrendered their brokenness to Jesus, I received a text message I'll never forget: \"Your painting is in hanging in the center of OUR home.\" God restored their marriage! The painting now hangs in their living room with their initials on each side and has become a symbol of the restoration God brought to their family. What a God of restoration we serve!!!",
       "background": "/assets/images/blog/bg_brown.jpg"
+    },
+    {
+      "title": "Raising Arrows ",
+      "background": "/assets/images/blog/img_4180.jpg",
+      "description_title": "Custom Raising Arrows Painting",
+      "description": " The raising areas collection is based on Psalm 127:4-5 “Children are a heritage form the Lord. Like Arrows in the hands of a warrior are the children of one’s youth. Blessed is the man who fills his quiver with them. \n\n\n\nThese paintings have become modern day family portraits and a heirloom of family legacy passed down generations.",
+      "paintings": [
+        {
+          "title": "Becca’s Arrows ",
+          "feature_image": "/assets/images/blog/img_9075.jpeg",
+          "price": 1650
+        }
+      ]
     }
   ]
 }
