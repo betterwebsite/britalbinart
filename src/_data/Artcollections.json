@@ -95,6 +95,12 @@
           "price": 2800
         }
       ]
+    },
+    {
+      "title": "Freedom Collection",
+      "background": "/assets/images/blog/img_4447.jpeg",
+      "description": "About the Freedom Collection",
+      "paintings": []
     }
   ]
 }
