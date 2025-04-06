@@ -98,9 +98,15 @@
     },
     {
       "title": "Freedom Collection",
-      "background": "/assets/images/blog/img_4447.jpeg",
-      "description": "About the Freedom Collection",
-      "paintings": []
+      "background": "/assets/images/blog/img_0282.jpeg",
+      "description": "About the Identity Collection",
+      "paintings": [
+        {
+          "feature_image": "/assets/images/blog/img_0282.jpeg",
+          "price": 145,
+          "title": "Custom Fingerprint paintings"
+        }
+      ]
     }
   ]
 }
