@@ -1,0 +1,69 @@
+---
+title: 'Terms Of Use | Brit Albin Art'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'termsofuse/'
+eleventyNavigation:
+    key: Contact Us
+    order: 600
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/termsofuse.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Terms Of Use</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/feet.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/feet.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/feet.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+<!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 500, height:500}) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}">
+                    <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="cabinets" loading="lazy" width="400" height="563">
+                </picture>
+                <!-- <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/me.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/me.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/me.jpg" alt="house" loading="lazy" width="400" height="563">
+                </picture> -->
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">Last Updated April 7th 2025</span>
+                <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">AGREEMENT TO OUR LEGAL TERMS</h2>
+                <p class="cs-text">
+                    All artwork, writing, painting summaries, and content on this site are the intellectual property of Brittany Celeste Lassiter Albin and protected by U.S. copyright law.
+                </p>
+                <p class="cs-text">
+                    No part of this website — including images, text, or designs — may be copied, reproduced, or used for personal, commercial, or social media purposes without written permission. Ownership of original artwork does not include reproduction or licensing rights.
+                </p>
+                <p class="cs-text">
+                    All rights to images of sold or commissioned work are retained by Brit Albin Art.
+                </p>
+                <!-- <a href="/about" class="cs-button-solid">Learn More</a> -->
+            </div>
+        </div>
+    </section>
+{% endblock %}

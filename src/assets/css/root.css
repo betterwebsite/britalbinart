@@ -1192,7 +1192,7 @@
   }
   #footer .credit .copyright {
     display: block;
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
 }
 /* Small Desktop */
@@ -1263,6 +1263,7 @@
   }
   #footer .credit .copyright {
     display: inline-block;
+    font-size: 1rem;
   }
 }
 /* Dark Mode */
