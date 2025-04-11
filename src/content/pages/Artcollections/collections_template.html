@@ -83,35 +83,8 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
 </section>
 
 
-<div class="custom-shape-divider-top-1743380496">
-  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-  </svg>
-</div>
 
-<style>
-  .custom-shape-divider-top-1743380496 {
-  position: relative;
-  top: -0.5px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1743380496 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 92px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1743380496 .shape-fill {
-  fill: #8e7c6a;
-}
-</style>
-
+{% if collection.title != 'Raising Arrows ' %}
 
 
 
@@ -130,11 +103,7 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
   </div>
 </section>
 {% endif %}
-
-
-
-
-    <!-- ============================================ -->
+<!-- ============================================ -->
 <!--                 Collection                   -->
 <!-- ============================================ -->
 
@@ -181,7 +150,6 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
   <a href="/contact" class="cs-button-solid" style="color: white;">Contact For Custom Sizes</a>
 </div>
 
-
 <div class="custom-shape-divider-bottom-1743381112">
   <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
       <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
@@ -212,6 +180,23 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
 </style>
 
 
+
+{% else %}
+<!-- Raising Arrows Special-->
+
+
+
+
+{% endif %}
+
+
+
 {% include 'components/cta.html' %}
+
+
+
+
+
+
 
 {% endblock %}
