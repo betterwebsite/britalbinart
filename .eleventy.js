@@ -14,6 +14,11 @@ const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
+
+
+const markdownIt = require("markdown-it");
+
+
 module.exports = function (eleventyConfig) {
 
 
@@ -104,6 +109,42 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+
+
+
+    const md = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true,
+      });
+      
+      // Add class to each block-level tag
+      const defaultRender = md.renderer.rules;
+      
+      const addClass = (tag) => {
+        const original = md.renderer.rules[tag] || md.renderer.renderToken;
+        md.renderer.rules[tag] = function (tokens, idx, options, env, self) {
+          const token = tokens[idx];
+          const existingClass = token.attrGet('class');
+          token.attrSet('class', existingClass ? `${existingClass} cs-text` : 'cs-text');
+          return self.renderToken(tokens, idx, options);
+        };
+      };
+      
+      // Apply to block-level tags
+      ['paragraph_open', 'blockquote_open', 'heading_open', 'bullet_list_open', 'ordered_list_open', 'list_item_open'].forEach(addClass);
+      
+    
+      // Filter for inline markdown (for <p>, <strong>, `code`, etc.)
+      eleventyConfig.addFilter("markdownify", (value) => {
+        return md.renderInline(value || "");
+      });
+    
+      // Filter for full markdown blocks (like headings, lists, images, quotes)
+      eleventyConfig.addFilter("markdownblock", (value) => {
+        return md.render(value || "");
+      });
+    
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/

@@ -93,8 +93,8 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
   <div class="cs-container">
       <div class="cs-right" style="display: flex;flex-direction: column;align-items: center; padding: 3em;">
           <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">{{ collection.description_title }}</h2>
-          <p class="cs-text" style="text-align: center;">
-            {{ collection.description }}
+          <p class="cs-text" style="text-align: left;">
+            {{ collection.description  | markdownblock | safe}}
           </p>
           <p class="cs-text">
               
