@@ -1004,32 +1004,6 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
   <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
   </section>
                      
-                              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% if collection.description_title and collection.description %}
 <section id="sbs">
@@ -1121,6 +1095,78 @@ permalink: "Artcollections/{{ collection.title | slugify }}/"
   fill: #FBF5F1;
 }
 </style>
+
+
+
+
+
+
+{% elseif collection.title == 'Custom Fingerprints' %}
+
+{% if collection.description_title and collection.description %}
+<section id="sbs">
+  <div class="cs-container">
+      <div class="cs-right" style="display: flex;flex-direction: column;align-items: center; padding: 3em;">
+          <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">{{ collection.description_title }}</h2>
+          <p class="cs-text" style="text-align: left;">
+            {{ collection.description  | markdownblock | safe}}
+          </p>
+          <p class="cs-text">
+              
+          </p>
+      </div>
+  </div>
+</section>
+{% endif %}
+
+<section id="collection-1624">
+  <div class="cs-container">
+      <div class="cs-content">
+          <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;"><a href="https://payhip.com/BritAlbinArt" class="cs-button-solid">My Store</a></h2>
+          
+          <!-- <a href="" class="cs-button-solid">View All Collection</a> -->
+      </div>
+      <div class="cs-collection-wrapper">
+          <ul class="cs-card-group">
+            {% for painting in collection.paintings  %}
+              <li class="cs-item">
+                  <a href="{{ painting.url }}" class="cs-link">
+                      <div class="cs-image-group">
+                          <picture class="cs-picture">
+                              <!--Mobile Image-->
+                              <source media="(max-width: 600px)" srcset="{{ painting.feature_image }}">
+                              <!--Tablet and above Image-->
+                              <source media="(min-width: 601px)" srcset="{{ painting.feature_image }}">
+                              <img loading="lazy" decoding="async" src="{{ painting.feature_image }}" alt="painting" width="1280" height="1280">
+                          </picture>
+                          <!-- <span class="cs-offer"></span> -->
+                      </div>
+                      <div class="cs-details">
+                          <h3 class="cs-product">{{ painting.title }}</h3>
+                          <div class="cs-wrapper">
+                              <div class="cs-flex">
+                                  <span class="cs-price">{% if painting.price %}{{ painting.price | money }}{% else %} contact{% endif %}</span>
+                                  <!-- <span class="cs-old-price">$45.00</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </li>
+              {% endfor %}
+          </ul>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
 
 
 
