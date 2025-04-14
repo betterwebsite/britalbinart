@@ -520,7 +520,7 @@
     align-items: center;
     width: 100%;
     /* set text align to left if content needs to be left aligned */
-    text-align: center;
+    text-align: left;
   }
   #services-1169 .cs-title {
     max-width: 20ch;
@@ -771,7 +771,7 @@
     content: "";
     width: 12.3125em;
     height: 57.598039%;
-    border: 0.25em solid var(--secondary);
+    border: 0.25em solid var(--primary);
     position: absolute;
     top: -1.25em;
     right: -1.25em;
@@ -1227,7 +1227,7 @@
     content: "";
     width: 17.5625em;
     height: 21em;
-    border: 0.25em solid var(--secondary);
+    border: 0.25em solid var(--primary);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1248,18 +1248,6 @@
     position: absolute;
     top: 0;
     left: 0;
-  }
-  #sbsr-2232 .cs-flower {
-    /* 183px - 309px */
-    width: clamp(11.4375rem, 28vw, 19.3125rem);
-    height: auto;
-    display: block;
-    position: absolute;
-    right: -3.75rem;
-    /* 55px - 109px */
-    bottom: calc(clamp(3.4375rem, 6vw, 4.8125rem) * -1);
-    z-index: 1;
-    transform: rotate(95deg);
   }
 }
 /* Tablet - 768px */
@@ -1409,7 +1397,7 @@
     content: "";
     width: 14.125em;
     height: 63.271605%;
-    border: 0.25em solid #897361;
+    border: 0.25em solid var(--primary);
     position: absolute;
     bottom: -1.25em;
     left: -1.25em;
@@ -1425,7 +1413,7 @@
     content: "";
     width: 12.3125em;
     height: 57.598039%;
-    border: 0.25em solid var(--secondary);
+    border: 0.25em solid var(--primary);
     position: absolute;
     top: -1.25em;
     right: -1.25em;
@@ -1575,5 +1563,622 @@
     text-align: left;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+/*-- -------------------------- -->
+<---       Mended Series 1      -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-2169 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2169 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 10vw, 8rem);
+  }
+  #sbsr-2169 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-2169 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #sbsr-2169 .cs-text:last-of-type {
+    /* 32px - 80px */
+    margin-bottom: clamp(2rem, 7vw, 5rem);
+  }
+  #sbsr-2169 .cs-picture {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbsr-2169 .cs-picture img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbsr-2169 .cs-image-group {
+    width: 100%;
+    /* 520px - 740px */
+    height: clamp(32.3125rem, 100vw, 46.25rem);
+    flex: none;
+    position: relative;
+    z-index: 1;
+    order: -1;
+  }
+  #sbsr-2169 .cs-picture1 {
+    /* 220px - 400px */
+    height: clamp(13.75rem, 30vw, 25rem);
+    max-height: 25rem;
+    border: clamp(4px, 2vw, 9px) solid #fff;
+  }
+  #sbsr-2169 .cs-picture2 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    /* changes to a clamp at tablet */
+    right: 2.5rem;
+    left: 0;
+    /* changes to clamp at tablet */
+    bottom: 3.4375rem;
+  }
+  #sbsr-2169 .cs-floater {
+    /* 80px - 170px */
+    width: clamp(5rem, 15vw, 10.625rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  #sbsr-2169 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2169 .cs-background img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.16;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-2169 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #sbsr-2169 .cs-content {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbsr-2169 .cs-image-group {
+    width: 45vw;
+    max-width: 32.625rem;
+    height: auto;
+    margin-bottom: 3.125rem;
+    order: 2;
+  }
+  #sbsr-2169 .cs-picture2 {
+    /* 60px - 100px */
+    right: clamp(3.75rem, 10vw, 6.5rem);
+    /* 80px - 120px */
+    bottom: clamp(5rem, 9vw, 7.5rem);
+  }
+}
+/*-- -------------------------- -->
+<---       Mended Series 2      -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-1373 {
+    padding: var(--sectionPadding);
+  }
+  #sbs-1373 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #sbs-1373 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 36.5rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #sbs-1373 .cs-topper {
+    color: #767676;
+  }
+  #sbs-1373 .cs-title {
+    max-width: 20ch;
+  }
+  #sbs-1373 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-1373 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-1373 .cs-content-flair {
+    width: 100%;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  #sbs-1373 .cs-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sbs-1373 .cs-h3 {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #sbs-1373 .cs-progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+  }
+  #sbs-1373 .cs-progress-bar {
+    width: var(--progress);
+    height: 100%;
+    border-radius: 10px;
+    background-color: var(--primary);
+    display: block;
+  }
+  #sbs-1373 .cs-percentage {
+    font-size: 0.875rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  #sbs-1373 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #sbs-1373 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #sbs-1373 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #sbs-1373 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-1373 .cs-flex {
+    max-width: 56.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.3vw, 1.25rem);
+  }
+  #sbs-1373 .cs-picture {
+    width: 100%;
+    height: 90vw;
+    min-height: 20.5rem;
+    max-height: 28.125rem;
+    /* 24px - 48px */
+    /* clips the img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  #sbs-1373 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1373 .cs-review {
+    /* 24px - 60px */
+    padding: clamp(1.5rem, 5vw, 3.75rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 80px - 150px */
+    gap: clamp(5rem, 10vw, 9.375rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-1373 .cs-review:before {
+    /* background color in pseudo so we can use the color variable */
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* 24px - 48px */
+    background: var(--primary);
+    opacity: 0.1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+  }
+  #sbs-1373 .cs-icon {
+    /* 80px - 120px */
+    width: clamp(5rem, 10vw, 7.5rem);
+    height: auto;
+    opacity: 0.3;
+    display: block;
+  }
+  #sbs-1373 .cs-review-text {
+    /* 20px - 31px */
+    font-size: clamp(1.25rem, 2vw, 1.9375rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 43.75rem) {
+  #sbs-1373 .cs-flex {
+    flex-direction: row;
+  }
+  #sbs-1373 .cs-picture {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbs-1373 .cs-review {
+    width: 100%;
+  }
+}
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #sbs-1373 .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #sbs-1373 .cs-content {
+    width: 23.0625rem;
+    text-align: left;
+    align-items: flex-start;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbs-1373 .cs-review {
+    justify-content: space-between;
+  }
+}
+/*-- -------------------------- -->
+<---       Mended Series 3      -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbsr-579 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 7vw, 4rem);
+  }
+  #sbsr-579 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    /* prevents padding from affecting width and height */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbsr-579 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbsr-579 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbsr-579 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbsr-579 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbsr-579 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbsr-579 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 18.75rem;
+  }
+  #sbsr-579 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbsr-579 {
+    padding: var(--sectionPadding);
+  }
+  #sbsr-579 .cs-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    /* 60px - 128px */
+    gap: clamp(3.75rem, 10vw, 8rem);
+  }
+  #sbsr-579 .cs-content {
+    width: 53%;
+    /* reset the padding, add the section padding back to the section container */
+    padding: 0;
+  }
+  #sbsr-579 .cs-picture {
+    width: 47vw;
+    max-width: 30.875rem;
+    /* 518px - 700px */
+    height: clamp(32.375rem, 63vw, 43.75rem);
+    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+    margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem);
+    position: relative;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbsr-579 .cs-picture:before {
+    /* yellow box */
+    content: "";
+    width: 50%;
+    height: 60%;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: absolute;
+    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+    right: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  }
+}
+/*-- -------------------------- -->
+<---       Mended Series 4      -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2168 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2168 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 10vw, 8rem);
+  }
+  #sbs-2168 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-2168 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+  #sbs-2168 .cs-text:last-of-type {
+    /* 32px - 80px */
+    margin-bottom: clamp(2rem, 7vw, 5rem);
+  }
+  #sbs-2168 .cs-picture {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2168 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #sbs-2168 .cs-image-group {
+    width: 100%;
+    /* 520px - 740px */
+    height: clamp(32.3125rem, 100vw, 46.25rem);
+    flex: none;
+    position: relative;
+    z-index: 1;
+    order: -1;
+  }
+  #sbs-2168 .cs-picture1 {
+    /* 220px - 400px */
+    height: clamp(13.75rem, 30vw, 25rem);
+    max-height: 25rem;
+    border: clamp(4px, 2vw, 9px) solid #fff;
+  }
+  #sbs-2168 .cs-picture2 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    /* changes to a clamp at tablet */
+    left: 2.5rem;
+    right: 0;
+    /* changes to clamp at tablet */
+    bottom: 3.4375rem;
+  }
+  #sbs-2168 .cs-floater {
+    /* 80px - 170px */
+    width: clamp(5rem, 15vw, 10.625rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  #sbs-2168 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbs-2168 .cs-background img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.16;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2168 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  #sbs-2168 .cs-content {
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  #sbs-2168 .cs-image-group {
+    width: 45vw;
+    max-width: 32.625rem;
+    height: auto;
+    margin-bottom: 3.125rem;
+  }
+  #sbs-2168 .cs-picture2 {
+    /* 60px - 100px */
+    left: clamp(3.75rem, 10vw, 6.5rem);
+    /* 80px - 120px */
+    bottom: clamp(5rem, 9vw, 7.5rem);
   }
 }

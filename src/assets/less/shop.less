@@ -604,7 +604,7 @@
             align-items: center;
             width: 100%;
             /* set text align to left if content needs to be left aligned */
-            text-align: center;
+            text-align: left;
         }
 
         .cs-title {
@@ -911,7 +911,7 @@
                 content: "";
                 width: (197/16em);
                 height: 57.598039%;
-                border: (4/16em) solid var(--secondary);
+                border: (4/16em) solid var(--primary);
                 position: absolute;
                 top: (-20/16em);
                 right: (-20/16em);
@@ -1452,7 +1452,7 @@
                 content: "";
                 width: (281/16em);
                 height: (336/16em);
-                border: (4/16em) solid var(--secondary);
+                border: (4/16em) solid var(--primary);
                 position: absolute;
                 bottom: 0;
                 right: 0;
@@ -1478,18 +1478,7 @@
             }
         }
 
-        .cs-flower {
-            /* 183px - 309px */
-            width: clamp(11.4375rem, 28vw, 19.3125rem);
-            height: auto;
-            display: block;
-            position: absolute;
-            right: (-60/16rem);
-            /* 55px - 109px */
-            bottom: calc(clamp(3.4375rem, 6vw, 4.8125rem) * -1);
-            z-index: 1;
-            transform: rotate(95deg);
-        }
+    
     }
 }
 
@@ -1668,7 +1657,7 @@
                 content: "";
                 width: (226/16em);
                 height: 63.271605%;
-                border: (4/16em) solid #897361;
+                border: (4/16em) solid var(--primary);
                 position: absolute;
                 bottom: (-20/16em);
                 left: (-20/16em);
@@ -1686,7 +1675,7 @@
                 content: "";
                 width: (197/16em);
                 height: 57.598039%;
-                border: (4/16em) solid var(--secondary);
+                border: (4/16em) solid var(--primary);
                 position: absolute;
                 top: (-20/16em);
                 right: (-20/16em);
@@ -1871,7 +1860,718 @@
         }
     }
 }
+
+
+
+
+/*-- -------------------------- -->
+<---       Mended Series 1      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-2169 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 10vw, 8rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                /* 32px - 80px */
+                margin-bottom: clamp(2rem, 7vw, 5rem);
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 110%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            /* 520px - 740px */
+            height: clamp(32.3125rem, 100vw, 46.25rem);
+            flex: none;
+            position: relative;
+            z-index: 1;
+            order: -1;
+        }
+
+        .cs-picture1 {
+            /* 220px - 400px */
+            height: clamp(13.75rem, 30vw, 25rem);
+            max-height: (400/16rem);
+            border: clamp(4px, 2vw, 9px) solid #fff;
+        }
+
+        .cs-picture2 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            /* changes to a clamp at tablet */
+            right: (40/16rem);
+            left: 0;
+            /* changes to clamp at tablet */
+            bottom: (55/16rem);
+        }
+
+        .cs-floater {
+            /* 80px - 170px */
+            width: clamp(5rem, 15vw, 10.625rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: .16;
+                mix-blend-mode: darken;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbsr-2169 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-image-group {
+            width: 45vw;
+            max-width: (522/16rem);
+            height: auto;
+            margin-bottom: (50/16rem);
+            order: 2;
+        }
+
+        .cs-picture2 {
+            /* 60px - 100px */
+            right: clamp(3.75rem, 10vw, 6.5rem);
+            /* 80px - 120px */
+            bottom: clamp(5rem, 9vw, 7.5rem);
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---       Mended Series 2      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-1373 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: (584/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            color: #767676;
+        }
+
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-content-flair {
+            width: 100%;
+            margin: 0 0 (32/16rem);
+            display: flex;
+            flex-direction: column;
+            gap: (20/16rem);
+        }
+
+        .cs-bar {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: (8/16rem);
+        }
+
+        .cs-h3 {
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            width: 100%;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-progress {
+            width: 100%;
+            height: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #e8e8e8;
+        }
+
+        .cs-progress-bar {
+            width: var(--progress);
+            height: 100%;
+            border-radius: 10px;
+            background-color: var(--primary);
+            display: block;
+        }
+
+        .cs-percentage {
+            font-size: (14/16rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            line-height: (56/16rem);
+            text-decoration: none;
+            font-weight: 700;
+            overflow: hidden;
+            margin: 0;
+            color: #fff;
+            padding: 0 (48/16rem);
+            border-radius: (30/16rem);
+            background-color: var(--primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 0%;
+                background: #1a1a1a;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                color: var(--primary);
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-flex {
+            max-width: (904/16rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.3vw, 1.25rem);
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 90vw;
+            min-height: (328/16rem);
+            max-height: (450/16rem);
+            /* 24px - 48px */
+           
+            /* clips the img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-review {
+            /* 24px - 60px */
+            padding: clamp(1.5rem, 5vw, 3.75rem);
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 80px - 150px */
+            gap: clamp(5rem, 10vw, 9.375rem);
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                /* background color in pseudo so we can use the color variable */
+                content: "";
+                width: 100%;
+                height: 100%;
+                /* 24px - 48px */
+               
+                background: var(--primary);
+                opacity: 0.1;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-icon {
+            /* 80px - 120px */
+            width: clamp(5rem, 10vw, 7.5rem);
+            height: auto;
+            opacity: 0.3;
+            display: block;
+        }
+
+        .cs-review-text {
+            /* 20px - 31px */
+            font-size: clamp(1.25rem, 2vw, 1.9375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 43.75rem) {
+    #sbs-1373 {
+        .cs-flex {
+            flex-direction: row;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-review {
+            width: 100%;
+        }
+    }
+}
+
+/* Large Desktop 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #sbs-1373 {
+        .cs-container {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: (369/16rem);
+            text-align: left;
+            align-items: flex-start;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-review {
+            justify-content: space-between;
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---       Mended Series 3      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbsr-579 {
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (522/16rem);
+            /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+            padding: var(--sectionPadding);
+            padding-top: 0;
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: (300/16rem);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbsr-579 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            flex-direction: row;
+            justify-content: flex-end;
+            /* 60px - 128px */
+            gap: clamp(3.75rem, 10vw, 8rem);
+        }
+
+        .cs-content {
+            width: 53%;
+            /* reset the padding, add the section padding back to the section container */
+            padding: 0;
+        }
+
+        .cs-picture {
+            width: 47vw;
+            max-width: (494/16rem);
+            /* 518px - 700px */
+            height: clamp(32.375rem, 63vw, 43.75rem);
+            /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
+            margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem);
+            position: relative;
+            /* sends it to the right in the 2nd position */
+            order: 2;
+
+            &:before {
+                /* yellow box */
+                content: "";
+                width: 50%;
+                height: 60%;
+                background: var(--primary);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
+                bottom: ~"calc(clamp(1rem, 2.4vw, 1.75rem)*-1)";
+                right: ~"calc(clamp(1rem, 2.4vw, 1.75rem)*-1)";
+            }
+        }
+    }
+}
+
+
+/*-- -------------------------- -->
+<---       Mended Series 4      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-2168 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 10vw, 8rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+            margin-bottom: (16/16rem);
+            &:last-of-type {
+                /* 32px - 80px */
+                margin-bottom: clamp(2rem, 7vw, 5rem);
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-image-group {
+            width: 100%;
+            /* 520px - 740px */
+            height: clamp(32.3125rem, 100vw, 46.25rem);
+            flex: none;
+            position: relative;
+            z-index: 1;
+            order: -1;
+        }
+
+        .cs-picture1 {
+            /* 220px - 400px */
+            height: clamp(13.75rem, 30vw, 25rem);
+            max-height: (400/16rem);
+            border: clamp(4px, 2vw, 9px) solid #fff;
+        }
+
+        .cs-picture2 {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 0;
+            /* changes to a clamp at tablet */
+            left: (40/16rem);
+            right: 0;
+            /* changes to clamp at tablet */
+            bottom: (55/16rem);
+        }
+
+        .cs-floater {
+            /* 80px - 170px */
+            width: clamp(5rem, 15vw, 10.625rem);
+            height: auto;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: .16;
+                mix-blend-mode: darken;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-2168 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            /* sends it to the right in the 2nd position */
+            order: 2;
+        }
+
+        .cs-image-group {
+            width: 45vw;
+            max-width: (522/16rem);
+            height: auto;
+            margin-bottom: (50/16rem);
+        }
+
+        .cs-picture2 {
+            /* 60px - 100px */
+            left: clamp(3.75rem, 10vw, 6.5rem);
+            /* 80px - 120px */
+            bottom: clamp(5rem, 9vw, 7.5rem);
+        }
+    }
+}
                                 
-
-
-
