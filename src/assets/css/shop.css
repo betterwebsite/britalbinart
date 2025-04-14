@@ -1413,7 +1413,7 @@
     content: "";
     width: 12.3125em;
     height: 57.598039%;
-    border: 0.25em solid var(--primary);
+    border: 0.25em solid var(--pri);
     position: absolute;
     top: -1.25em;
     right: -1.25em;
@@ -1611,7 +1611,7 @@
   }
   #sbsr-2169 .cs-picture img {
     width: 110%;
-    height: 100%;
+    height: 105%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -2180,5 +2180,404 @@
     left: clamp(3.75rem, 10vw, 6.5rem);
     /* 80px - 120px */
     bottom: clamp(5rem, 9vw, 7.5rem);
+  }
+}
+/*-- ------------------------------ -->
+<---    Freedom Collection 1        -->
+<--- ------------------------------ -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #sbs-2171 {
+    background-color: #FBF5F1;
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2171 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #sbs-2171 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    /* moved section padding to cs-content so the cs-background can be full width */
+    padding: var(--sectionPadding);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  #sbs-2171 .cs-text {
+    margin-bottom: 1rem;
+  }
+  #sbs-2171 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #sbs-2171 .cs-ul {
+    margin: 0 0 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  #sbs-2171 .cs-li {
+    list-style: none;
+  }
+  #sbs-2171 .cs-h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+  }
+  #sbs-2171 .cs-li-text {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: var(--bodyTextColor);
+  }
+  #sbs-2171 .cs-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+  #sbs-2171 .cs-flex {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #sbs-2171 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    display: block;
+  }
+  #sbs-2171 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbs-2171 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbs-2171 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs-2171 .cs-picture {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 35rem;
+    z-index: 1;
+  }
+  #sbs-2171 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #sbs-2171 .cs-floater {
+    width: 24%;
+    max-width: 18.4375rem;
+    height: auto;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #sbs-2171 {
+    /* 90px - 150px */
+    /* returned section padding to the section container, this Stitch has 1.5X padding top and bottom than the normal Stitch */
+    padding: clamp(5.625rem, 9vw, 9.375rem) 1rem;
+  }
+  #sbs-2171 .cs-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #sbs-2171 .cs-content {
+    width: 48%;
+    max-width: 35.1875rem;
+    /* 32px - 90px */
+    padding: clamp(2rem, 5vw, 5.625rem) 0;
+  }
+  #sbs-2171 .cs-picture {
+    width: 50vw;
+    height: auto;
+    margin-right: 2.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+  }
+  #sbs-2171 .cs-floater {
+    display: block;
+  }
+}
+/*-- -------------------------- -->
+<---           Gallery          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #gallery-2243 {
+    padding: var(--sectionPadding);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-container {
+    width: 100%;
+    max-width: 115rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 5vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-content {
+    /* aligns text centrally. set to left to left-align text */
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* centrally aligns items. set to flex-start to left-align items */
+    align-items: center;
+    z-index: 2;
+  }
+  #gallery-2243 .cs-title {
+    max-width: 40ch;
+  }
+  #gallery-2243 .cs-gallery {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(16, 16.666vw);
+    gap: clamp(0.5rem, 2vw, 1.25rem);
+  }
+  #gallery-2243 .cs-picture {
+    grid-column: span 6;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #gallery-2243 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #gallery-2243 .cs-picture1 {
+    grid-row: 2 / span 3;
+  }
+  #gallery-2243 .cs-picture2 {
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-picture3 {
+    grid-column: span 12;
+    grid-row: 5 / span 5;
+  }
+  #gallery-2243 .cs-picture4 {
+    grid-row: 10 / span 4;
+  }
+  #gallery-2243 .cs-picture5 {
+    grid-row: 11 / span 3;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #gallery-2243 .cs-gallery {
+    /* 320px - 600px */
+    height: clamp(20rem, 41vw, 37.5rem);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  #gallery-2243 .cs-gallery .cs-picture {
+    grid-column: span 1;
+  }
+  #gallery-2243 .cs-gallery .cs-picture1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 3;
+  }
+  #gallery-2243 .cs-gallery .cs-picture2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture3 {
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 6;
+  }
+  #gallery-2243 .cs-gallery .cs-picture4 {
+    grid-column: 5 / span 1;
+    grid-row: 1 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture5 {
+    grid-column: 6 / span 1;
+    grid-row: 2 / span 3;
+  }
+}
+/* Desktop - 1600px */
+@media only screen and (min-width: 100rem) {
+  #gallery-2243 .cs-gallery {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  #gallery-2243 .cs-gallery .cs-picture {
+    grid-column: span 1;
+  }
+  #gallery-2243 .cs-gallery .cs-picture1 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 4;
+  }
+  #gallery-2243 .cs-gallery .cs-picture2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 5;
+  }
+  #gallery-2243 .cs-gallery .cs-picture3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 6;
+  }
+  #gallery-2243 .cs-gallery .cs-picture4 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / span 5;
+  }
+  #gallery-2243 .cs-gallery .cs-picture5 {
+    grid-column: 5 / span 1;
+    grid-row: 2 / span 4;
+  }
+}
+/*-- -------------------------- -->
+<---           Quote            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #quote-2141 {
+    /* 80px - 160px */
+    padding: clamp(5rem, 10vw, 10rem) 1rem;
+    background-color: #FBF5F1;
+    position: relative;
+    z-index: 1;
+  }
+  #quote-2141 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+  }
+  #quote-2141 .cs-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #quote-2141 .cs-quote-icon {
+    /* 120px - 220px */
+    width: clamp(7.5rem, 12vw, 13.75rem);
+    height: auto;
+    display: block;
+    position: absolute;
+    /* -48px - -96px */
+    top: calc(clamp(3rem, 8vw, 6rem)*-1);
+    z-index: -1;
+  }
+  #quote-2141 .cs-quote {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 4.8vw, 3.0625rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 45ch;
+    /* 24px - 32px */
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+    color: var(--headerColor);
+  }
+  #quote-2141 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary);
+    display: block;
+  }
+  #quote-2141 .cs-job {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #quote-2141 .cs-flower {
+    width: 50vw;
+    max-width: 40rem;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+  #quote-2141 .cs-left {
+    top: 0;
+    left: 0;
+  }
+  #quote-2141 .cs-right {
+    right: 0;
+    bottom: 0;
   }
 }
