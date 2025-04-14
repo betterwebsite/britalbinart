@@ -755,7 +755,7 @@
     content: "";
     width: 14.125em;
     height: 63.271605%;
-    border: 0.25em solid var(--secondary);
+    border: 0.25em solid #897361;
     position: absolute;
     bottom: -1.25em;
     left: -1.25em;
@@ -1409,7 +1409,7 @@
     content: "";
     width: 14.125em;
     height: 63.271605%;
-    border: 0.25em solid var(--secondary);
+    border: 0.25em solid #897361;
     position: absolute;
     bottom: -1.25em;
     left: -1.25em;
