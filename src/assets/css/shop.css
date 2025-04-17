@@ -1521,7 +1521,7 @@
     color: var(--bodyTextColorWhite);
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--secondary);
+    background-color: #c78854;
     border-radius: 0.25rem;
     display: inline-block;
     position: relative;
