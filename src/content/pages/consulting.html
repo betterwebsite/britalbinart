@@ -1,0 +1,288 @@
+---
+title: 'Contact | Brit Albin Art'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'consulting/'
+eleventyNavigation:
+    key: Contact Us
+    order: 600
+    hideOnDesktop: true
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/consulting.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1950">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Bring Your God-Given Vision To Life With Purposeful, Story- Driven Strategy
+                and Products That Fuel Your Mission!</h1>
+            <div class="cs-flex-group">
+                <p class="cs-text">Helping mission-driven brands bring their vision to life through
+                    intentional storytelling, custom product design, and purpose-driven strategy.</p>
+                <a href="" class="cs-button-solid">Share your vision</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image, there's a background image in the CSS for the parallax effect you'll need to change as well if you swap out our images -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultlanding.jpg?updatedAt=1746111273328">
+        <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultlanding.jpg?updatedAt=1746111273328">
+        <img decoding="async" src="https://ik.imagekit.io/6ycdefzj5/britconsultlanding.jpg?updatedAt=1746111273328" alt="restaurant" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-left">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 500, height:500}) | webp %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}">
+                    <img aria-hidden="true" decoding="async" src="{% getUrl '/assets/images/me3.jpg' | resize({ width: 1000, height:1000}) | webp %}" alt="cabinets" loading="lazy" width="400" height="563">
+                </picture>
+                <!-- <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/me.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/me.jpg">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/me.jpg" alt="house" loading="lazy" width="400" height="563">
+                </picture> -->
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-right">
+                <span class="cs-topper">About Me</span>
+                <h2 class="cs-title" style="font-family: 'Trirong';font-weight: 300;">Hi I'm Brit!</h2>
+                <p class="cs-text">
+                    I’m a full-time artist and creative consultant helping soloprenuers, small businesses, ministries, and nonprofits turn ideas into beautiful, functional products that connect deeply with their audience. From logos and branding to custom journals, Packaging, and more —everything I create is grounded in your unique story. 
+
+                </p>
+                <p class="cs-text">
+                    
+                
+                
+                <!-- <a href="/about" class="cs-button-solid">Learn More</a> -->
+            </div>
+        </div>
+    </section>
+
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1444">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/volunteers.jpg" alt="volunteers" width="650" height="600" aria-hidden="true">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">What I Value Most:</h2>
+            <p class="cs-text">
+                
+            </p>
+            <ul class="cs-card-group">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Story-Driven Design</h3>
+                        <p class="cs-li-text">
+                            Every piece tells a story worth holding onto.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Intentionality Over Trends</h3>
+                        <p class="cs-li-text">
+                            Thoughtful design that stands the test of time.
+
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Gospel-Centered Creativity</h3>
+                        <p class="cs-li-text">
+                            Work that honors God and serves people well.
+
+                        </p>
+                    </div>
+                </li>
+            </ul>     
+            <a href="" class="cs-button-solid"></a>        
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-1645">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">My Services</span>
+            <h2 class="cs-title">How I Can Help Your Vision Come to Life: </h2>
+            <p class="cs-text"></p>
+            <a href="" class="cs-button-solid">Let’s chat About Your project</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/checkmark-circle-gold.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Custom Merch Design</h3>
+                    <p class="cs-item-text">From swag bags and apparel to giftable items that move with your mission—I design meaningful merch that people actually want to keep.</p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dashboard-gold.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Logo & Brand Identity Design</h3>
+                    <p class="cs-item-text">I collaborate with you to create a brand that reflects who you are and what you stand for—visually, spiritually, and strategically.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Lifebuoy-gold.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Journal & Product Design</h3>
+                    <p class="cs-item-text">Whether it’s a devotional, a curriculum workbook, or a boutique-style journal, I design products that people want to use and share.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like-gold.svg" loading="lazy" decoding="async" alt="icon" width="48" height="48" aria-hidden="true">
+                <!-- Text Grouped For Flexbox-->
+                <div class="cs-text-group">
+                    <h3 class="cs-h3">Creative Direction</h3>
+                    <p class="cs-item-text">- Need vision for a launch, campaign, or experience? I’ll help you bring clarity to the look, feel, and flow of your project.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-2272">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview1.jpg?updatedAt=1746114764854">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview1.jpg?updatedAt=1746114764854">
+                <img loading="lazy" decoding="async" src="https://ik.imagekit.io/6ycdefzj5/britconsultreview1.jpg?updatedAt=1746114764854" alt="wedding" width="272" height="337">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/britsoncultreview1.2.jpg?updatedAt=1746114942917">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/britsoncultreview1.2.jpg?updatedAt=1746114942917g">
+                <img loading="lazy" decoding="async" src="https://ik.imagekit.io/6ycdefzj5/britsoncultreview1.2.jpg?updatedAt=1746114942917" alt="wedding" width="243" height="367">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper"></span>
+            <h2 class="cs-title">What Clients Are Saying:</h2>
+            <p class="cs-text">
+                “I have loved working with you! I love the logo, marketing boxes, stationary, and the custom journals you designed, and everything else you have helped me with so far! I’ve become crystal clear with my mission and the excitement to build my business has returned. I can’t wait for our next project together! ” <br>— Sally Mulready, Home Champions, Top Tulsa Real Estate Agent with Coldwell Banker Select 
+
+            </p>
+            <a href="" class="cs-button-solid"></a>
+        </div>
+    </div>
+   
+</section>
+
+
+
+
+<!-- ============================================ -->
+<!--               Side By Side Pair              -->
+<!-- ============================================ -->
+
+<section id="RPsbs-2140">
+    <div class="cs-container">
+        <div class="cs-section1">
+            <div class="cs-content">
+                <span class="cs-topper"></span>
+                <h2 class="cs-title">“Wow, you did absolutely AMAZING on our Logo and Brand kit. I absolutely LOVE IT. You thought of everything!” <br>Korina and Omar, Boldly Brave Ministries</h2>
+            </div>
+            <picture class="cs-picture1">
+                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.jpg?updatedAt=1746115433665">
+                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.jpg?updatedAt=1746115433665">
+                <img loading="lazy" decoding="async" src="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.jpg?updatedAt=1746115433665" alt="wedding" width="688" height="464" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-section2">
+            <picture class="cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.1.jpg?updatedAt=1746115598660">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.1.jpg?updatedAt=1746115598660">
+                <img loading="lazy" decoding="async" src="https://ik.imagekit.io/6ycdefzj5/britconsultreview2.1.jpg?updatedAt=1746115598660" alt="wedding" width="674" height="504" aria-hidden="true">
+            </picture>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <h3 class="cs-h3">“Wow, you did absolutely AMAZING on our Logo and Brand kit. I absolutely LOVE IT. You thought of everything!” <br>Korina and Omar, Boldly Brave Ministries
+                    </h3>
+                    <p class="cs-li-text">
+    
+                    </p>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</section>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+{% endblock %}
