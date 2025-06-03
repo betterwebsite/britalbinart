@@ -628,7 +628,7 @@
   }
   #services-1645 .cs-item-text {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-size: 1.2rem;
     text-align: inherit;
     line-height: 1.5em;
     margin: 0;
@@ -1023,9 +1023,10 @@
     color: var(--bodyTextColor);
   }
   #RPsbs-2140 .cs-picture1 {
-    width: 100%;
-    height: 17.5rem;
-    /* clips img tag corners */
+    width: calc(265 / 16 * 1rem);
+    /* 16.5625rem */
+    height: calc(324 / 16 * 1rem);
+    /* 20.25rem */
     overflow: hidden;
     border: 8px solid #ffffff;
     display: block;
@@ -1042,9 +1043,10 @@
     left: 0;
   }
   #RPsbs-2140 .cs-picture2 {
-    width: 100%;
-    height: 20rem;
-    /* clips img tag corners */
+    width: calc(345 / 16 * 1rem);
+    /* 21.5625rem */
+    height: calc(408 / 16 * 1rem);
+    /* 25.5rem */
     overflow: hidden;
     border: 8px solid #ffffff;
     display: block;
@@ -1086,7 +1088,10 @@
   #RPsbs-2140 .cs-section1,
   #RPsbs-2140 .cs-section2 {
     flex-direction: row;
-    align-items: stretch;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* Reduce space between image and content */
   }
   #RPsbs-2140 .cs-section1 .cs-content {
     padding: 6.25rem 0;
@@ -1121,9 +1126,32 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  #RPsbs-2140 .cs-section1,
+  #RPsbs-2140 .cs-section2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    /* Reduce space between image and content */
+  }
   #RPsbs-2140 .cs-flower {
     top: -5rem;
     right: -1rem;
+  }
+  #RPsbs-2140 .cs-picture1 {
+    height: auto;
+    min-height: calc(324 / 16 * 1rem);
+    /* 20.25rem */
+    max-width: calc(265 / 16 * 1rem);
+    /* 16.5625rem */
+  }
+  #RPsbs-2140 .cs-picture2 {
+    height: auto;
+    min-height: calc(408 / 16 * 1rem);
+    /* 25.5rem */
+    max-width: calc(345 / 16 * 1rem);
+    /* 21.5625rem */
+    order: -1;
   }
 }
 /* Large Desktop - 1440px */
@@ -1206,7 +1234,7 @@
   }
   #steps-1712 .cs-item-text {
     /* 14px - 16px */
-    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-size: 1.2rem;
     line-height: 1.5em;
     text-align: left;
     margin: 0;

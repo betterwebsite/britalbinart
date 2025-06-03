@@ -732,7 +732,7 @@
 
         .cs-item-text {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-size: 1.2rem;
             text-align: inherit;
             line-height: 1.5em;
             margin: 0;
@@ -1211,15 +1211,14 @@
         }
 
         .cs-picture1 {
-            width: 100%;
-            height: (280/16rem);
-            /* clips img tag corners */
+            width: calc(265 / 16 * 1rem); /* 16.5625rem */
+            height: calc(324 / 16 * 1rem); /* 20.25rem */
             overflow: hidden;
             border: 8px solid #ffffff;
             display: block;
             position: relative;
             z-index: 1;
-
+        
             img {
                 width: 100%;
                 height: 100%;
@@ -1230,18 +1229,17 @@
                 left: 0;
             }
         }
-
+        
         .cs-picture2 {
-            width: 100%;
-            height: (320/16rem);
-            /* clips img tag corners */
+            width: calc(345 / 16 * 1rem); /* 21.5625rem */
+            height: calc(408 / 16 * 1rem); /* 25.5rem */
             overflow: hidden;
             border: 8px solid #ffffff;
             display: block;
             order: 2;
             position: relative;
             z-index: 1;
-
+        
             img {
                 width: 100%;
                 height: 100%;
@@ -1253,7 +1251,6 @@
                 left: 0;
             }
         }
-
         .cs-flower {
             width: clamp(8.3125rem, 28vw, 18.2rem);
             height: auto;
@@ -1280,9 +1277,12 @@
             }
         }
 
-        .cs-section1, .cs-section2 {
+        .cs-section1,
+        .cs-section2 {
             flex-direction: row;
-            align-items: stretch;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem; /* Reduce space between image and content */
         }
 
         .cs-section1 {
@@ -1331,9 +1331,28 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #RPsbs-2140 {
+        .cs-section1,
+.cs-section2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem; /* Reduce space between image and content */
+}
         .cs-flower {
             top: (-80/16rem);
             right: (-16/16rem);
+        }
+        .cs-picture1 {
+            height: auto;
+            min-height: calc(324 / 16 * 1rem); /* 20.25rem */
+            max-width: calc(265 / 16 * 1rem); /* 16.5625rem */
+        }
+        
+        .cs-picture2 {
+            height: auto;
+            min-height: calc(408 / 16 * 1rem); /* 25.5rem */
+            max-width: calc(345 / 16 * 1rem); /* 21.5625rem */
+            order: -1;
         }
     }
 }
@@ -1435,7 +1454,7 @@
 
         .cs-item-text {
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 2vw, 1rem);
+            font-size: 1.2rem;
             line-height: 1.5em;
             text-align: left;
             margin: 0;
