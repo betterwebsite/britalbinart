@@ -933,231 +933,135 @@
   }
 }
 /*-- -------------------------- -->
-<---      Side By Side Pair     -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #RPsbs-2140 {
+  #sbsr-2169 {
     padding: var(--sectionPadding);
-    background-color: #FBF5F1;
-    overflow: hidden;
     position: relative;
+    z-index: 1;
   }
-  #RPsbs-2140 .cs-container {
+  #sbsr-2169 .cs-container {
     width: 100%;
-    /* changed to 1280px at tablet */
-    max-width: 34rem;
+    /* changes to 1280px at tablet */
+    max-width: 36.5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-    position: relative;
-    z-index: 1;
+    gap: clamp(3rem, 10vw, 8rem);
   }
-  #RPsbs-2140 .cs-container::before {
-    content: "";
-    width: 100vw;
-    background-color: #F6EBE3;
-    opacity: 1;
-    position: absolute;
-    top: 6.5625rem;
-    bottom: 12.5rem;
-    z-index: -1;
-  }
-  #RPsbs-2140 .cs-section1,
-  #RPsbs-2140 .cs-section2 {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #RPsbs-2140 .cs-content {
-    /* set text align to center if content needs to be centrally aligned */
+  #sbsr-2169 .cs-content {
+    /* set text align to left if content needs to be left aligned */
     text-align: left;
     width: 100%;
-    max-width: 38.5625rem;
     display: flex;
     flex-direction: column;
-    /* aligns content to the left, set to center to centrally align */
+    /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #RPsbs-2140 .cs-title {
-    max-width: 20ch;
-    margin: 0;
-    text-align: center;
-    font-size: 2rem;
+  #sbsr-2169 .cs-text {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 1rem;
   }
-  #RPsbs-2140 .cs-ul {
+  #sbsr-2169 .cs-text:last-of-type {
+    /* 32px - 80px */
+    margin-bottom: clamp(2rem, 7vw, 5rem);
+  }
+  #sbsr-2169 .cs-picture {
     width: 100%;
-    max-width: 32.875rem;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  #RPsbs-2140 .cs-li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-  }
-  #RPsbs-2140 .cs-h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.2em;
-    margin: 0 0 0.5rem 0;
-    color: var(--headerColor);
-  }
-  #RPsbs-2140 .cs-li-text {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0;
-    color: var(--bodyTextColor);
-  }
-  #RPsbs-2140 .cs-picture1 {
-    width: calc(265 / 16 * 1rem);
-    /* 16.5625rem */
-    height: calc(324 / 16 * 1rem);
-    /* 20.25rem */
-    overflow: hidden;
-    border: 8px solid #ffffff;
     display: block;
     position: relative;
     z-index: 1;
   }
-  #RPsbs-2140 .cs-picture1 img {
+  #sbsr-2169 .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
   }
-  #RPsbs-2140 .cs-picture2 {
-    width: calc(345 / 16 * 1rem);
-    /* 21.5625rem */
-    height: calc(408 / 16 * 1rem);
-    /* 25.5rem */
-    overflow: hidden;
-    border: 8px solid #ffffff;
-    display: block;
-    order: 2;
+  #sbsr-2169 .cs-image-group {
+    width: 100%;
+    /* 520px - 740px */
+    height: clamp(32.3125rem, 100vw, 46.25rem);
+    flex: none;
     position: relative;
     z-index: 1;
+    order: -1;
   }
-  #RPsbs-2140 .cs-picture2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-    display: block;
+  #sbsr-2169 .cs-picture1 {
+    /* 220px - 400px */
+    height: clamp(13.75rem, 30vw, 25rem);
+    max-height: 25rem;
+    border: clamp(4px, 2vw, 9px) solid #fff;
+  }
+  #sbsr-2169 .cs-picture2 {
+    width: auto;
+    height: auto;
     position: absolute;
     top: 0;
+    /* changes to a clamp at tablet */
+    right: 2.5rem;
     left: 0;
+    /* changes to clamp at tablet */
+    bottom: 3.4375rem;
   }
-  #RPsbs-2140 .cs-flower {
-    width: clamp(8.3125rem, 28vw, 18.2rem);
+  #sbsr-2169 .cs-floater {
+    /* 80px - 170px */
+    width: clamp(5rem, 15vw, 10.625rem);
     height: auto;
     display: block;
     position: absolute;
-    top: -0.5rem;
-    right: -1.5rem;
-    z-index: 1;
-    transform: rotate(-80deg);
+    right: 0;
+    bottom: 0;
+  }
+  #sbsr-2169 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #sbsr-2169 .cs-background img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.16;
+    mix-blend-mode: darken;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #RPsbs-2140 .cs-container {
+  #sbsr-2169 .cs-container {
     max-width: 80rem;
-  }
-  #RPsbs-2140 .cs-container::before {
-    top: 4.375rem;
-    /* -70px to -200px */
-    bottom: clamp(4.375rem, 16vw, 12.5rem);
-  }
-  #RPsbs-2140 .cs-section1,
-  #RPsbs-2140 .cs-section2 {
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    /* Reduce space between image and content */
+    justify-content: space-between;
+    align-items: stretch;
   }
-  #RPsbs-2140 .cs-section1 .cs-content {
-    padding: 6.25rem 0;
+  #sbsr-2169 .cs-content {
+    /* sends it to the right in the 2nd position */
+    order: 2;
   }
-  #RPsbs-2140 .cs-section2 .cs-ul {
-    /* 28px - 100px */
-    padding: clamp(1.75rem, 7vw, 6.25rem) 0;
-    justify-content: center;
-  }
-  #RPsbs-2140 .cs-title {
-    max-width: 20ch;
-  }
-  #RPsbs-2140 .cs-content {
-    width: 40%;
-    flex: none;
-    justify-content: center;
-  }
-  #RPsbs-2140 .cs-picture1 {
-    /* 332px - 480px */
-    min-height: clamp(20.75rem, 40vw, 30rem);
+  #sbsr-2169 .cs-image-group {
+    width: 45vw;
+    max-width: 32.625rem;
     height: auto;
+    margin-bottom: 3.125rem;
+    order: 2;
   }
-  #RPsbs-2140 .cs-picture2 {
-    height: auto;
-    /* 440px - 520px */
-    min-height: clamp(27.5rem, 40vw, 32.5rem);
-    order: -1;
-  }
-  #RPsbs-2140 .cs-flower {
-    top: -3.75rem;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #RPsbs-2140 .cs-section1,
-  #RPsbs-2140 .cs-section2 {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    /* Reduce space between image and content */
-  }
-  #RPsbs-2140 .cs-flower {
-    top: -5rem;
-    right: -1rem;
-  }
-  #RPsbs-2140 .cs-picture1 {
-    height: auto;
-    min-height: calc(324 / 16 * 1rem);
-    /* 20.25rem */
-    max-width: calc(265 / 16 * 1rem);
-    /* 16.5625rem */
-  }
-  #RPsbs-2140 .cs-picture2 {
-    height: auto;
-    min-height: calc(408 / 16 * 1rem);
-    /* 25.5rem */
-    max-width: calc(345 / 16 * 1rem);
-    /* 21.5625rem */
-    order: -1;
-  }
-}
-/* Large Desktop - 1440px */
-@media only screen and (min-width: 90rem) {
-  #RPsbs-2140 .cs-flower {
-    top: 0;
+  #sbsr-2169 .cs-picture2 {
+    /* 60px - 100px */
+    right: clamp(3.75rem, 10vw, 6.5rem);
+    /* 80px - 120px */
+    bottom: clamp(5rem, 9vw, 7.5rem);
   }
 }
 /*-- -------------------------- -->
