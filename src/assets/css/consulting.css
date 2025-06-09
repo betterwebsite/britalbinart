@@ -1196,13 +1196,12 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #steps-1712 .cs-wrapper {
-    width: 50vw;
+    width: 47vw;
   }
   #steps-1712 .cs-background {
     width: 50vw;
     left: 50%;
     right: auto;
-    margin-left: 8rem;
   }
 }
 /*-- ---------------------- -->

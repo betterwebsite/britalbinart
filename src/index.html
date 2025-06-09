@@ -1,6 +1,6 @@
 ---
 title: 'Brit Albin Art | Home | Tulsa Ok'
-description: ''
+description: 'Faith-driven art that tells your story with custom pieces rooted in scripture, blending personal journeys and meaning into every painting.'
 preloadImg: ''
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -127,6 +127,147 @@ eleventyNavigation:
     <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
+
+<!-- Modal Overlay -->
+<div id="guide-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <h2 id="modal-title" style="font-family: 'Trirong'; font-weight: 300;">Your story is sacred. Let’s find out why.</h2>
+    <p class="cs-text">Understanding your past is key to walking confidently into your future.</p>
+    <p class="cs-text">Enter your email below and get your free 18+ page <strong>Tell It Like It’s Sacred Story Guide</strong> to start uncovering the God-woven themes in your life and discover the unique place you hold in this world.</p>
+    <p class="cs-text">Your story matters. And being able to share your testimony is one of the most powerful tools in your arsenal.</p>
+    <form class="modal-form" netlify>
+      <label for="email" class="visually-hidden"class="cs-text">Email address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <button type="submit" class="cs-text">Send Me the Free Guide 📥</button>
+    </form>
+  </div>
+</div>
+
+<style>
+    .modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal-content {
+  background: #fff;
+  width: 80vw; height: 80vh;
+  max-width: 800px; max-height: 600px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  position: relative;
+  line-height: 1.6;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.modal-form input[type="email"] {
+  flex: 1 1 60%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.modal-form button {
+  flex: 1 1 35%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #897361;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modal-form button:hover {
+  background: #776455;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px; height: 1px;
+  margin: -1px; overflow: hidden;
+}
+
+</style>
+<script>
+(function() {
+  // Grab your modal and close button
+  const modal = document.getElementById('guide-modal');
+  if (!modal) return; // bail if modal not on this page
+  const closeBtn = modal.querySelector('.modal-close');
+
+  // Function to show the modal
+  function openModal() {
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  // Function to hide the modal
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  // Close when clicking the “×”
+  closeBtn.addEventListener('click', closeModal);
+
+  // Close when clicking the overlay (outside content)
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+
+  // On page load…
+  document.addEventListener('DOMContentLoaded', () => {
+    // Only show once per visitor:
+    if (localStorage.getItem('guideModalShown') !== 'true') {
+      openModal();
+      localStorage.setItem('guideModalShown', 'true');
+    }
+    // —Or simply force every load, comment out the guard above and just call:
+    // openModal();
+  });
+})();
+</script>
+
+
+
 
 <section id="hero-11601">
     <div class="cs-container">
