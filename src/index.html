@@ -257,8 +257,9 @@ eleventyNavigation:
   document.addEventListener('DOMContentLoaded', () => {
     // Only show once per visitor:
     if (localStorage.getItem('guideModalShown') !== 'true') {
-      openModal();
-      localStorage.setItem('guideModalShown', 'true');
+    //   uncomment this section for 
+    //   openModal();
+    //   localStorage.setItem('guideModalShown', 'true');
     }
     // —Or simply force every load, comment out the guard above and just call:
     // openModal();
